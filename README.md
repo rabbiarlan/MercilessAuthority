@@ -136,8 +136,8 @@ MercilessAuthority/
 | v2.8 | Mar 15, 2026 | True zero-delay: popup runs in same process via STA Runspace. |
 | v2.9 | Mar 16, 2026 | Iron Curtain: Win key + all hotkeys blocked. |
 | v2.11 | Mar 19, 2026 | Three distinct melodic beeps. DEAD countdown. Force shutdown. |
-| v2.20 | Mar 2026 | Final polish: DPI-proof layout, GDI ghost text eliminated, full animation system. |
-| v2.21 | Apr 2026 | Universal paths — works on any Windows account on any machine. |
+| v2.20 | Mar 20, 2026 | Final polish: DPI-proof layout, GDI ghost text eliminated, full animation system. |
+| v2.21 | Apr 27, 2026 | Universal paths — works on any Windows account on any machine. |
 
 Full changelog inside `BatteryMercy.ps1` header.
 
