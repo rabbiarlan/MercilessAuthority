@@ -69,7 +69,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **OS** | Windows 10 / 11 (64-bit) |
 | **Architecture** | x64 primary. ARM64 via Windows emulation layer. |
 | **Runtime** | None required — MercilessAuthority.exe is self-contained |
-| **PowerShell** | Only needed if recompiling from source (PS 7.1+) |
+| **PowerShell** | Only needed if recompiling from source (PS 7.5.4+) |
 | **Recompile tool** | Standard ps2exe v1.0.17 |
 | **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
@@ -80,7 +80,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 To **recompile** from source only, download the given files and this:
 - [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
 
-After that, run in Windows PowerShell 7.X as Administrator then copy this:
+After that, run in Windows PowerShell 7.5.4+ as Administrator then copy this:
 ```
   Invoke-ps2exe `
     -inputFile   "$PSScriptRoot\BatteryMercy.ps1" `
@@ -193,8 +193,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 > **DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(**   
 > DO SO WITH YOUR CONSENT WITH FROM OTHERS AND IF YOU HAVE BEEN GRANTED A GIVEN PERMISSION WITH ABILITY TO USE IT   
-> I DO NOT HAVE ANY FORMS OF RESPONSIBILITY FOR ANY IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM
-> BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO
+> I DO NOT HAVE ANY FORMS OF RESPONSIBILITY FOR ANY IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM  
+> BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO  
 > BECAUSE THIS TOOL IS AN EDUCATIONAL/SYSTEM AUTOMATION PURPOSES PROJECT.   
 > And also it has `No system-level persistence, no network activity, and lastly no data collection.`*(Who needs that pile of junk in their code...?)*
 
