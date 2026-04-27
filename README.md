@@ -145,8 +145,6 @@ MercilessAuthority/
 
 Full changelog inside `BatteryMercy.ps1` header.
 
----
-
 *“Whatever you do, work heartily, as for the Lord and not for men,” — Colossians 3:23*   
 *“For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes.” — Romans 1:16*   
 *Jesus said to him, “If you can,! Anything is possible for the one who believes” — Mark 9:23*
