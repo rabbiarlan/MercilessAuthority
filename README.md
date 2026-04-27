@@ -66,15 +66,15 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Recompile tool** | Standard ps2exe v1.0.17 |
 - A laptop with a battery (obviously 💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"*
 
-> The pre-built `.exe` works on any Windows 10/11 machine.  
-> No PowerShell. No .NET install. No dependencies. Just run it.
+> **Note:** Windows Defender may flag this on first run due to keyboard hooks
+> and force-shutdown behaviour. This is a false positive. Source code is fully
+> open — read BatteryMercy.ps1 to verify exactly what runs.
 
 To **recompile** from source only:
 - [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
 
-> **Note:** Windows Defender may flag this on first run due to keyboard hooks
-> and force-shutdown behaviour. This is a false positive. Source code is fully
-> open — read BatteryMercy.ps1 to verify exactly what runs.
+> The pre-built `.exe` works on any Windows 10/11 machine.  
+> No PowerShell. No .NET install. No dependencies. Just run it.
 
 ---
 
