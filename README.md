@@ -125,12 +125,24 @@ Or just double-click `LaunchBattery.vbs` to run it manually right now.
 
 ---
 
-## 🧪 Safe Test Run
+## 🧪 Safe Test Runs
 
 Don't want the force-shutdown behaviour while testing? Run `BatteryMercy_TestRun.ps1` instead. It fires the popups with real battery data but **never calls `Stop-Computer`**. Safe to run any time.
 
 ```powershell
 pwsh -ExecutionPolicy Bypass -File BatteryMercy_TestRun.ps1
+```
+
+Or these other optional harmless test run commands to try out:
+
+```low
+pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
+```
+```high
+pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
+```
+```DEADMAN's switch
+pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
 
 ---
