@@ -65,7 +65,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Runtime** | None required — MercilessAuthority.exe is self-contained |
 | **PowerShell** | Only needed if recompiling from source (PS 7.1+) |
 | **Recompile tool** | Standard ps2exe v1.0.17 |
-| **Device** | A laptop with a battery *(obviously 💀🥀🥶🙏)* or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
+| **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
 > **Note:** Windows Defender may flag this on first run due to keyboard hooks
 > and force-shutdown behaviour. This is a false positive. Source code is fully
