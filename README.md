@@ -9,7 +9,7 @@
 
 ---
 
-# ⚠️READ THIS FIRST BEFORE USE AT YOUR OWN RISK‼️ —Why It Looks Like Malware *(But It Isn't)*
+# ⚠️READ THIS FIRST BEFORE USE AT YOUR OWN RISK —Why It Looks Like Malware‼️ *(But It Isn't)*
 
 This app blocks Alt+Tab, the Win key, Ctrl+Esc, and goes fullscreen unclosable.   
 It forces you to click on the Red button that says: **“YES pwease, Master~!”** *(I'm sorry if you have to go through this bro...🙏)*
