@@ -77,8 +77,29 @@ For the developers or some curious geeks like me who want to know what's actuall
 > and force-shutdown behaviour. This is a false positive. Source code is fully   
 > open — read BatteryMercy.ps1 to verify exactly what runs.
 
-To **recompile** from source only:
+To **recompile** from source only, download the given files and this:
 - [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
+
+After that, run in Windows PowerShell 7.X as Administrator then copy this:
+```
+  Invoke-ps2exe `
+    -inputFile   "$PSScriptRoot\BatteryMercy.ps1" `
+    -outputFile  "$PSScriptRoot\MercilessAuthority.exe" `
+    -iconFile    "$PSScriptRoot\holycleanAPP.ico" `
+    -title       "MERCILESS AUTHORITY" `
+    -description "Totalitarian Battery Monitor — No Mercy, No Remorse" `
+    -product     "BatteryMercy System" `
+    -company     "Rabbi S. Arlan" `
+    -copyright   "2026 Rabbi S. Arlan. All rights reserved." `
+    -version     "2.21.0.0" `
+    -noConsole `
+    -noOutput `
+    -noError
+```
+Or in this way when you copypaste it, it returns as reversed upside-down order:
+```
+Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScriptRoot\MercilessAuthority.exe" -iconFile "$PSScriptRoot\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
+```
 
 > The pre-built `.exe` works on any Windows 10/11 machine.  
 > No PowerShell. No .NET install. No dependencies. Just run it.
