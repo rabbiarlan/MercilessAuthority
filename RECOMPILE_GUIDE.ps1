@@ -325,6 +325,13 @@ Get-ScheduledTask | Where-Object { $_.TaskName -like "*Battery*" -or $_.TaskName
 #        But if it works after the popup message but it stays like <5.0MB
 #        afterwards then it is perfectly fine and can run automatically normally.
 #
+# ERROR: If this is possible you ended up with this type of error...
+# FIX:   Do not use ps2exe.core, instead only use the standard ps2exe.
+#        I was too late and ended up building with the standard legacy ps2exe
+#        without knowing there is a fully-fledged modern ps2exe.core full support
+#        with Windows PowerShell 7.1+ scripts — But don't worry,
+#        it fully supports this currently and working properly in standard ps2exe
+#
 # ───────────────────────────────────────────────────────────────────
 
 
