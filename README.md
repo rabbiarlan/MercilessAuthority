@@ -19,8 +19,8 @@ If your laptop dies at 5% because a tiny toast notification was easy to ignore, 
 
 **This is not malware.** It is aggressively opinionated battery management software that I have created just for fun!
 
-**"Totalitarian battery monitor inspired by North Korean Authoritarian Control. No escape. No mercy."**
-**"Super high-attention aggressive strict focus mode notifier battery alert system"**
+**"Totalitarian battery monitor inspired by North Korean Authoritarian Control. No escape. No mercy. No remorse."**   
+**"This is apparently a Super high-attention aggressive strict focus mode notifier battery percentage-management alert system"**
 
 ---
 
