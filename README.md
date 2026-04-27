@@ -3,6 +3,10 @@
 ### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever I made for fun!*   
 #### *Only for Windows Laptops that has functioning batteries!*
 
+**“This is apparently a Super high-attention very aggressive strict focus mode notifier battery percentage-management alert system  
+that actively interrupts and reinforces awareness of battery status to prevent missed low-power situations.  
+It does not support in any other operating systems or in legacy operating systems”**
+
 > Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭   
 > God first, before technology. — Matthew 6:33   
 > From **v1.0** (basic popup MessageBox) to **v2.21** (fullscreen lockout with kernel32 P/Invoke) — built entirely from scratch.
@@ -25,8 +29,7 @@ The source code is fully publicly explictly open. You can read every single line
 
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
-**“Totalitarian battery monitor inspired by North Korean Authoritarian Control.”**   
-**“This is apparently a Super high-attention aggressive strict focus mode notifier battery percentage-management alert system that actively interrupts and reinforces awareness of battery status to prevent missed low-power situations.”**
+**“Totalitarian battery monitor inspired by North Korean Authoritarian Control.”**
 
 ---
 
@@ -62,7 +65,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 
 ## 📋 Requirements and ✅ Compatibility
 
-- PowerShell 7 (`pwsh.exe`) — [Download here](https://github.com/PowerShell/PowerShell/releases)
+- PowerShell 7 (`pwsh.exe`) — [Download here (PowerShell 7.5.4+)](https://github.com/PowerShell/PowerShell/releases)
 
 | | |
 |---|---|
@@ -96,6 +99,7 @@ After that, run in **Windows PowerShell 7.5.4+ as `Administrator`** then copy th
     -noOutput `
     -noError
 ```
+
 Or in this way when you copypaste it, it returns as reversed upside-down order:
 ```powershell
 Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScriptRoot\MercilessAuthority.exe" -iconFile "$PSScriptRoot\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
