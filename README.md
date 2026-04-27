@@ -3,7 +3,7 @@
 The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever!
 Only for Windows Laptops that has functioning batteries!
 
-> Built by **Rabbi S. Arlan**, 16 years old, Baybay City, Leyte, Philippines 🇵🇭  
+> Built by **Rabbi S. Arlan**, 16 years old from Philippines 🇵🇭  
 > From v1.0 (basic MessageBox) to v2.21 (fullscreen lockout with kernel32 P/Invoke) — built entirely from scratch.
 
 ---
@@ -11,7 +11,7 @@ Only for Windows Laptops that has functioning batteries!
 ## ⚠️ READ THIS FIRST — Why It Looks Like Malware (But It Isn't)
 
 This app blocks Alt+Tab, Ctrl+Alt+Del, the Win key, Ctrl+Esc, and goes fullscreen unclosable.
-It forces you to click on the Red button that says: **YES pwease, Master~!"***(I'm sorry if you have to go through this bro..🙏)*
+It forces you to click on the Red button that says: **YES pwease, Master~!"** *(I'm sorry if you have to go through this bro...🙏)*
 
 **That's intentional.** Here's why:
 
