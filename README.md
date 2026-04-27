@@ -145,7 +145,7 @@ Full changelog inside `BatteryMercy.ps1` header.
 
 ---
 
-## 📄 License
+# 📄 License
 
 MIT License
 
