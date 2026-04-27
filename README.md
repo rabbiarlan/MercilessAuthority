@@ -17,8 +17,9 @@ It forces you to click on the Red button that says: **“YES pwease, Master~!”
 **That's intentional.** Here's why:
 
 If your laptop dies at 5% because a tiny toast notification was easy to ignore, you lose unsaved work. MercilessAuthority makes the alert **impossible to ignore** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
-Task Manager always remains accessible as an emergency escape.*(If that's possible)* The source code is fully open. You can read every single line one by one before running anything in some systems or in yours.
+Task Manager always remains accessible as an emergency escape.*(If that's possible, but from my experience, i tried Ctrl+Alt+Del when it initiated, welp it didn't work, then this keyboard shortcut is also included in blocked lists)*
 
+The source code is fully publicly explictly open. You can read every single line one by one before running anything in some systems or in yours.   
 **This is not a very suspicious malware.** It is aggressively opinionated battery management software that I have created just for fun.   
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
