@@ -1,7 +1,7 @@
 # ⚡ MercilessAuthority 🔋 — Totalitarian Battery Monitor   
 ## *💚🔋✅ No mercy. No remorse. No dead batteries. 🚫🪫❌*   
 ### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever!*   
-#### Only for Windows Laptops that has functioning batteries!
+#### *Only for Windows Laptops that has functioning batteries!*
 
 > Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭   
 > God first, before technology. — Matthew 6:33   
