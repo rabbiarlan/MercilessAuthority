@@ -80,8 +80,8 @@ For the developers or some curious geeks like me who want to know what's actuall
 To **recompile** from source only, download the given files and this:
 - [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
 
-After that, run in Windows PowerShell 7.5.4+ as Administrator then copy this:
-```
+After that, run in **Windows PowerShell 7.5.4+ as `Administrator`** then copy this:
+```powershell
   Invoke-ps2exe `
     -inputFile   "$PSScriptRoot\BatteryMercy.ps1" `
     -outputFile  "$PSScriptRoot\MercilessAuthority.exe" `
@@ -97,7 +97,7 @@ After that, run in Windows PowerShell 7.5.4+ as Administrator then copy this:
     -noError
 ```
 Or in this way when you copypaste it, it returns as reversed upside-down order:
-```
+```powershell
 Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScriptRoot\MercilessAuthority.exe" -iconFile "$PSScriptRoot\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
 ```
 
@@ -135,13 +135,13 @@ pwsh -ExecutionPolicy Bypass -File BatteryMercy_TestRun.ps1
 
 Or these other optional harmless test run commands to try out:
 
-```low
+```powershell
 pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
 ```
-```high
+```powershell
 pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
 ```
-```DEADMAN's switch
+```powershell
 pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
 
