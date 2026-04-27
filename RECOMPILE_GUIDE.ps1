@@ -1,6 +1,7 @@
 # ═══════════════════════════════════════════════════════════════════
 # MERCILESS AUTHORITY — ps2exe RECOMPILE GUIDE v2.21
 # Run every step ONE BY ONE. Never chain commands. Never skip steps.
+# Designed as an intentionally strict, high-visibility battery reminder system.
 # ───────────────────────────────────────────────────────────────────
 # Author  : Rabbi S. Arlan
 # Machine : HP ProBook mt22 — Celeron 5205U, 8GB DDR4-2400 RAM, 128GB M.2 SATA SSD
@@ -29,7 +30,7 @@
 #   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
 #   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
 #   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
-#   (dead scenario will NOT call Stop-Computer — safe to test)
+#   (Deadman's switch scenario will NOT call Stop-Computer — safe to test)
 #
 # TASK SCHEDULER STATUS CODES — these are NOT errors (normal):
 #   0x0        = Last run completed successfully
@@ -174,6 +175,8 @@ Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScript
 # ps2exe v0.5.0.33's -sta is unreliable and was confirmed broken.
 # STA threading is already handled correctly inside BatteryMercy.ps1
 # via the Runspace ApartmentState = STA approach. Don't add -sta.
+#
+# Focus Alert Mode temporarily keeps the warning in the foreground until acknowledged.
 # ───────────────────────────────────────────────────────────────────
 
 
@@ -198,6 +201,9 @@ Test-Path "$PSScriptRoot\MercilessAuthority.exe"
 #   → Add Exclusion → type:  C:\Scripts  → Confirm
 #
 # Do this ONCE. Never need to redo after future recompiles.
+#
+# Some security software may flag behavior such as keyboard hooks or fullscreen focus control.
+# Review the source code and create exceptions only if you fully trust and understand the program.
 # ───────────────────────────────────────────────────────────────────
 
 
@@ -214,7 +220,7 @@ Start-Process "$PSScriptRoot\MercilessAuthority.exe"
 #   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
 #   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
 #   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
-# NOTE: dead scenario will NOT call Stop-Computer in TestRun — safe.
+# NOTE: Deadman's switch scenario will NOT call Stop-Computer in TestRun — safe.
 # ───────────────────────────────────────────────────────────────────
 
 
@@ -238,7 +244,7 @@ Get-ScheduledTask | Where-Object { $_.TaskName -like "*Battery*" -or $_.TaskName
 
 
 # ── STEP 10 — VERIFY Task Scheduler "Run with highest privileges" ───
-# WITHOUT this: Stop-Computer -Force inside the deadman switch has no
+# WITHOUT this: Stop-Computer -Force inside the deadman's switch has no
 # Admin rights and silently fails. Countdown hits zero → nothing happens.
 # Battery dies at 10% with the PC still fully on. Catastrophic.
 #
@@ -258,6 +264,10 @@ Get-ScheduledTask | Where-Object { $_.TaskName -like "*Battery*" -or $_.TaskName
 #        would fight the Global Mutex, causing a dirty hung state.
 #        This matches your confirmed setting: MultipleInstances=IgnoreNew)
 #   → Configure for: Windows 10 (works fine on Win11, don't change)
+#
+# NOTE: Designed for low-latency alerts
+#       Reliable single-instance enforcement using mutex  
+#       Possible fast popup response timing
 # ───────────────────────────────────────────────────────────────────
 
 
@@ -283,9 +293,10 @@ Get-ScheduledTask | Where-Object { $_.TaskName -like "*Battery*" -or $_.TaskName
 #        Use "2.21.0.0" exactly as written above.
 #
 # ERROR: Code: 800A0401 from Script C:\Scripts\CLICK_TO_RECOMPILE.vbs
-#        Expected end of statement
-# FIX:   idk honestly.... from the source Microsoft VBScript compilation error
-#        I'll try my best to debug and troubleshoot this soon.
+# FIX:   The code might've added or written something else
+#        internally in the source code that made it not work.
+#        Try to check the original code vs your current setup
+#        while following the error guidelines given.
 #
 # ERROR: Keyboard is laggy or Win-Key remains blocked after a crash
 # FIX:   The Low-Level Hook wasn't unhooked properly on crash.
