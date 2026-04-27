@@ -65,7 +65,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Runtime** | None required — MercilessAuthority.exe is self-contained |
 | **PowerShell** | Only needed if recompiling from source (PS 7.1+) |
 | **Recompile tool** | Standard ps2exe v1.0.17 |
-- A laptop with a battery (obviously 💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"*
+| **Device** | A laptop with a battery *(obviously 💀🥀🥶🙏)* or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
 > **Note:** Windows Defender may flag this on first run due to keyboard hooks
 > and force-shutdown behaviour. This is a false positive. Source code is fully
@@ -171,7 +171,7 @@ Built this at 16. God first, before technology. — Matthew 6:33
 *Jesus said to him, "If you can,! Anything is possible for the one who believes" — Mark 9:23*
 
 # Also another infos:
-> DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(   
+> **DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(**   
 > DO SO WITH YOUR CONSENT WITH FROM OTHERS OR IF YOU HAVE GIVEN PERMISSION WITH ABILITY TO USE IT   
 > I DO NOT HAVE RESPONSIBILITY FOR ANY IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO, BECAUSE THIS IS AN EXPERIMENTAL PROJECT I'M WORKING IN.   
-> And also: `No system-level persistence, no network activity, no data collection.` Who needs that pile of junk in their code...?
+> And also: `No system-level persistence, no network activity and lastly no data collection.` Who needs that pile of junk in their code...?
