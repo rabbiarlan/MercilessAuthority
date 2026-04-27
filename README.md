@@ -65,7 +65,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 
 ## 📋 Requirements and ✅ Compatibility
 
-- PowerShell 7 (`pwsh.exe`) — [Download here (PowerShell 7.5.4+)](https://github.com/PowerShell/PowerShell/releases)
+- PowerShell 7.5.4+ (`pwsh.exe`) — [Download here (PowerShell 7.5.4+)](https://github.com/PowerShell/PowerShell/releases)
 
 | | |
 |---|---|
@@ -81,7 +81,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 > open — read BatteryMercy.ps1 to verify exactly what runs.
 
 To **recompile** from source only, download the given files and this:
-- [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
+- Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
 
 After that, run in **Windows PowerShell 7.5.4+ as `Administrator`** then copy this:
 ```powershell
