@@ -38,9 +38,9 @@ Three alert modes:
 
 | Mode | Trigger | What Happens |
 |---|---|---|
-| **LOW** | ≤35%,unplugged, per-% drop | Fullscreen popup, sad descending beep, yellow warning icon |
-| **HIGH** | ≥85%, plugged in, per-% rise | Fullscreen popup, ascending major beep, green checkmark icon |
-| **DEAD** | ≤10%, unplugged | **60-second countdown popup**, ominous beep, force shutdown if still unplugged after countdown |
+| **LOW** | ≤35%,unplugged, per-% drop | Fullscreen popup, sad descending minor beeps, yellow warning icon |
+| **HIGH** | ≥85%, plugged in, per-% rise | Fullscreen popup, happy ascending major beeps, green checkmark icon |
+| **DEAD** | ≤10%, unplugged | **60-second countdown popup**, ominous creepy beeps, force shutdown if still unplugged after countdown |
 
 ---
 
