@@ -3,7 +3,8 @@
 The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever!
 Only for Windows Laptops that has functioning batteries!
 
-> Built by **Rabbi S. Arlan**, 16 years old from Philippines 🇵🇭  
+> Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from Philippines 🇵🇭  
+> God first, before technology. — Matthew 6:33
 > From v1.0 (basic MessageBox) to v2.21 (fullscreen lockout with kernel32 P/Invoke) — built entirely from scratch.
 
 ---
@@ -158,21 +159,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-## 👤 Author
-
-**Rabbi S. Arlan**  
-Computer Science & Engineering enthusiast | Baybay City, Leyte, Philippines 🇵🇭  
-Built this at 16. God first, before technology. — Matthew 6:33
-
----
-
 *"Whatever you do, work heartily, as for the Lord and not for men," — Colossians 3:23*
 *"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes." — Romans 1:16*
 *Jesus said to him, "If you can,! Anything is possible for the one who believes" — Mark 9:23*
 
 ---
 
-# 👮 Other Infos
+## 👮 Other Infos
 
 > **DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(**   
 > DO SO WITH YOUR CONSENT WITH FROM OTHERS OR IF YOU HAVE GIVEN PERMISSION WITH ABILITY TO USE IT   
