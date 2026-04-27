@@ -1,7 +1,7 @@
-# ⚡ MercilessAuthority 🔋 — Totalitarian Battery Monitor
-### *💚🔋✅ No mercy. No remorse. No dead batteries. 🚫🪫❌*
-The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever!
-Only for Windows Laptops that has functioning batteries!
+# ⚡ MercilessAuthority 🔋 — Totalitarian Battery Monitor   
+## *💚🔋✅ No mercy. No remorse. No dead batteries. 🚫🪫❌*   
+### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever!*   
+#### Only for Windows Laptops that has functioning batteries!
 
 > Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭   
 > God first, before technology. — Matthew 6:33   
@@ -9,14 +9,14 @@ Only for Windows Laptops that has functioning batteries!
 
 ---
 
-## ⚠️ READ THIS FIRST — Why It Looks Like Malware (But It Isn't)
+# ⚠️ READ THIS FIRST — Why It Looks Like Malware (But It Isn't)
 
 This app blocks Alt+Tab, the Win key, Ctrl+Esc, and goes fullscreen unclosable.   
 It forces you to click on the Red button that says: **YES pwease, Master~!"** *(I'm sorry if you have to go through this bro...🙏)*
 
 **That's intentional.** Here's why:
 
-If your laptop dies at 5% because a tiny toast notification was easy to ignore, you lose unsaved work. MercilessAuthority makes the alert **impossible to ignore** with also a mode to literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue! Task Manager always remains accessible as an emergency escape.*(If that's possible)* The source code is fully open. You can read every single line one by one before running anything in some systems or in yours.
+If your laptop dies at 5% because a tiny toast notification was easy to ignore, you lose unsaved work. MercilessAuthority makes the alert **impossible to ignore** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue! Task Manager always remains accessible as an emergency escape.*(If that's possible)* The source code is fully open. You can read every single line one by one before running anything in some systems or in yours.
 
 **This is not malware.** It is aggressively opinionated battery management software that I have created just for fun!
 
