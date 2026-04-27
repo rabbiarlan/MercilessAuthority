@@ -11,7 +11,7 @@ Only for Windows Laptops that has functioning batteries!
 
 ## ⚠️ READ THIS FIRST — Why It Looks Like Malware (But It Isn't)
 
-This app blocks Alt+Tab, the Win key, Ctrl+Esc, and goes fullscreen unclosable.
+This app blocks Alt+Tab, the Win key, Ctrl+Esc, and goes fullscreen unclosable.   
 It forces you to click on the Red button that says: **YES pwease, Master~!"** *(I'm sorry if you have to go through this bro...🙏)*
 
 **That's intentional.** Here's why:
@@ -68,8 +68,8 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Recompile tool** | Standard ps2exe v1.0.17 |
 | **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
-> **Note:** Windows Defender may flag this on first run due to keyboard hooks
-> and force-shutdown behaviour. This is a false positive. Source code is fully
+> **Note:** Windows Defender may flag this on first run due to keyboard hooks   
+> and force-shutdown behaviour. This is a false positive. Source code is fully   
 > open — read BatteryMercy.ps1 to verify exactly what runs.
 
 To **recompile** from source only:
@@ -177,5 +177,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## 🤖 Development Notes
 
 Built with AI-assisted pair programming (Claude Sonnet 4.6 Extended/Adaptive by Anthropic).  
-All architecture decisions, feature design, debugging direction, engineering concepts
+All architecture decisions, feature design, debugging direction, engineering concepts   
 and creative vision is all by Rabbi S. Arlan.
