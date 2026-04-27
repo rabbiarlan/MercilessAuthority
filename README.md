@@ -20,6 +20,7 @@ If your laptop dies at 5% because a tiny toast notification was easy to ignore, 
 **This is not malware.** It is aggressively opinionated battery management software that I have created just for fun!
 
 **"Totalitarian battery monitor inspired by North Korean Authoritarian Control. No escape. No mercy."**
+**"Super high-attention aggressive strict focus mode notifier battery alert system"**
 
 ---
 
@@ -137,7 +138,7 @@ MercilessAuthority/
 | v2.9 | Mar 16, 2026 | Iron Curtain: Win key + all hotkeys blocked. |
 | v2.11 | Mar 19, 2026 | Three distinct melodic beeps. DEAD countdown. Force shutdown. |
 | v2.20 | Mar 20, 2026 | Final polish: DPI-proof layout, GDI ghost text eliminated, full animation system. |
-| v2.21 | Apr 27, 2026 | Universal paths — works on any Windows account on any machine. |
+| v2.21 | Apr 27, 2026 | Finally revealing this to the public. Universal paths — works on any Windows account on any machine. |
 
 Full changelog inside `BatteryMercy.ps1` header.
 
@@ -168,3 +169,9 @@ Built this at 16. God first, before technology. — Matthew 6:33
 *"Whatever you do, work heartily, as for the Lord and not for men," — Colossians 3:23*
 *"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes." — Romans 1:16*
 *Jesus said to him, "If you can,! Anything is possible for the one who believes" — Mark 9:23*
+
+# Also another infos:
+> DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(
+> DO SO WITH YOUR CONSENT WITH FROM OTHERS OR IF YOU HAVE GIVEN PERMISSION WITH ABILITY TO USE IT
+> I DO NOT HAVE RESPONSIBILITY FOR ANY IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO, BECAUSE THIS IS AN EXPERIMENTAL PROJECT I'M WORKING IN.
+> And also: `No system-level persistence, no network activity, no data collection.` Who needs that amount of junk in their code...?
