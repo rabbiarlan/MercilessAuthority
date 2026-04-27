@@ -10,7 +10,7 @@ Only for Windows Laptops that has functioning batteries!
 
 ## ⚠️ READ THIS FIRST — Why It Looks Like Malware (But It Isn't)
 
-This app blocks Alt+Tab, Ctrl+Alt+Del, the Win key, Ctrl+Esc, and goes fullscreen unclosable.
+This app blocks Alt+Tab, the Win key, Ctrl+Esc, and goes fullscreen unclosable.
 It forces you to click on the Red button that says: **YES pwease, Master~!"** *(I'm sorry if you have to go through this bro...🙏)*
 
 **That's intentional.** Here's why:
@@ -170,8 +170,19 @@ Built this at 16. God first, before technology. — Matthew 6:33
 *"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes." — Romans 1:16*
 *Jesus said to him, "If you can,! Anything is possible for the one who believes" — Mark 9:23*
 
-# Also another infos:
+---
+
+# 👮 Other Infos
+
 > **DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(**   
 > DO SO WITH YOUR CONSENT WITH FROM OTHERS OR IF YOU HAVE GIVEN PERMISSION WITH ABILITY TO USE IT   
 > I DO NOT HAVE ANY FORMS OF RESPONSIBILITY FOR ANY IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO, BECAUSE THIS IS AN EXPERIMENTAL PROJECT I'M WORKING IN.   
 > And also: `No system-level persistence, no network activity, and lastly no data collection.` Who needs that pile of junk in their code...?
+
+---
+
+## 🤖 Development Notes
+
+Built with AI-assisted pair programming (Claude Sonnet 4.6 Extended/Adaptive by Anthropic).  
+All architecture decisions, feature design, debugging direction, engineering concepts
+and creative vision is all by Rabbi S. Arlan.
