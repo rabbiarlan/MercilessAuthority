@@ -174,4 +174,4 @@ Built this at 16. God first, before technology. — Matthew 6:33
 > DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(   
 > DO SO WITH YOUR CONSENT WITH FROM OTHERS OR IF YOU HAVE GIVEN PERMISSION WITH ABILITY TO USE IT   
 > I DO NOT HAVE RESPONSIBILITY FOR ANY IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO, BECAUSE THIS IS AN EXPERIMENTAL PROJECT I'M WORKING IN.   
-> And also: `No system-level persistence, no network activity, no data collection.` Who needs that amount of junk in their code...?
+> And also: `No system-level persistence, no network activity, no data collection.` Who needs that pile of junk in their code...?
