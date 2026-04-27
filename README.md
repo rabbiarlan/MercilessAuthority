@@ -12,7 +12,7 @@
 # ⚠️ READ THIS FIRST BEFORE USE AT YOUR OWN RISK — Why It Looks Like Malware (But It Isn't)
 
 This app blocks Alt+Tab, the Win key, Ctrl+Esc, and goes fullscreen unclosable.   
-It forces you to click on the Red button that says: **YES pwease, Master~!"** *(I'm sorry if you have to go through this bro...🙏)*
+It forces you to click on the Red button that says: **“YES pwease, Master~!”** *(I'm sorry if you have to go through this bro...🙏)*
 
 **That's intentional.** Here's why:
 
@@ -23,8 +23,8 @@ Task Manager always remains accessible as an emergency escape.*(If that's possib
 
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
-**"Totalitarian battery monitor inspired by North Korean Authoritarian Control."**   
-**"This is apparently a Super high-attention aggressive strict focus mode notifier battery percentage-management alert system"**
+**“Totalitarian battery monitor inspired by North Korean Authoritarian Control.”**   
+**“This is apparently a Super high-attention aggressive strict focus mode notifier battery percentage-management alert system that actively interrupts and reinforces awareness of battery status to prevent missed low-power situations.”**
 
 ---
 
@@ -148,6 +148,12 @@ Full changelog inside `BatteryMercy.ps1` header.
 
 ---
 
+*“Whatever you do, work heartily, as for the Lord and not for men,” — Colossians 3:23*   
+*“For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes.” — Romans 1:16*   
+*Jesus said to him, “If you can,! Anything is possible for the one who believes” — Mark 9:23*
+
+---
+
 # 📄 License
 
 MIT License
@@ -159,12 +165,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
----
-
-*"Whatever you do, work heartily, as for the Lord and not for men," — Colossians 3:23*   
-*"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes." — Romans 1:16*   
-*Jesus said to him, "If you can,! Anything is possible for the one who believes" — Mark 9:23*   
 
 ---
 
