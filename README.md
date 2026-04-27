@@ -3,9 +3,8 @@
 ### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever I made for fun!*   
 #### *Only for Windows Laptops that has functioning batteries!*
 
-**“This is apparently a Super high-attention very aggressive strict focus mode notifier battery percentage-management alert system  
-that actively interrupts and reinforces awareness of battery status to prevent missed low-power situations.  
-It does not support in any other operating systems or in legacy operating systems”**
+**“This is apparently a Super high-attention very aggressive strict focus mode notifier battery percentage-management alert system that actively interrupts and reinforces awareness of battery status to prevent missed low-power situations.  
+It does not support in any other operating systems or in any legacy operating systems”**
 
 > Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭   
 > God first, before technology. — Matthew 6:33   
@@ -20,12 +19,12 @@ It forces you to click on the Red button that says: **“YES pwease, Master~!”
 
 **That's intentional.** Here's why:
 
-If your laptop dies at 5% because a tiny toast notification was easy to ignore, you lose unsaved work. MercilessAuthority makes the alert **impossible to ignore** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
-Task Manager always remains accessible as an emergency escape. *(If that's possible, but from my experience, i tried Ctrl+Alt+Del when it initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists)*
+If your laptop **dies at approximately less than 10%** because of a tiny toast notification was easy to ignore, you will lose unsaved work and the effects are irreversible. MercilessAuthority fixes this issue and makes the alert **VERY IMPOSSIBLE to IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
+Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried Ctrl+Alt+Del when initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
 
 The source code is fully publicly explictly open. You can read every single line one by one before running anything in some systems or in yours.
 
-**This is not a very suspicious malware.** It is aggressively opinionated battery management software that I have created just for fun.
+**This is not a very suspicious malware.** It is a very aggressively opinionated battery management software that I have created just for fun.
 
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
