@@ -3,7 +3,7 @@
 The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever!
 Only for Windows Laptops that has functioning batteries!
 
-> Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭    
+> Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭   
 > God first, before technology. — Matthew 6:33   
 > From **v1.0** (basic popup MessageBox) to **v2.21** (fullscreen lockout with kernel32 P/Invoke) — built entirely from scratch.
 
@@ -159,9 +159,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-*"Whatever you do, work heartily, as for the Lord and not for men," — Colossians 3:23*
-*"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes." — Romans 1:16*
-*Jesus said to him, "If you can,! Anything is possible for the one who believes" — Mark 9:23*
+*"Whatever you do, work heartily, as for the Lord and not for men," — Colossians 3:23*   
+*"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes." — Romans 1:16*   
+*Jesus said to him, "If you can,! Anything is possible for the one who believes" — Mark 9:23*   
 
 ---
 
