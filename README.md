@@ -20,9 +20,9 @@ It forces you to click on the Red button that says: **“YES pwease, Master~!”
 **That's intentional.** Here's why:
 
 If your laptop **dies at approximately less than 10%** because of a tiny toast notification was easy to ignore, you will lose unsaved work and the effects are irreversible. MercilessAuthority fixes this issue and makes the alert **VERY IMPOSSIBLE to IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
-Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried Ctrl+Alt+Del when initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
+Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried `Ctrl+Alt+Del` after initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
 
-The source code is fully publicly explictly open. You can read every single line one by one before running anything in some systems or in yours.
+The source code is fully publicly explictly open. You can read every single line one by one line by line precisely carefully before running anything in some systems or in yours.
 
 **This is not a very suspicious malware.** It is a very aggressively opinionated battery management software that I have created just for fun.
 
@@ -68,16 +68,19 @@ For the developers or some curious geeks like me who want to know what's actuall
 
 | | |
 |---|---|
-| **OS** | Windows 10 / 11 (64-bit) |
+| **OS** | Windows 10 / 11 (`64-bit`) |
 | **Architecture** | x64 primary. ARM64 via Windows emulation layer. |
 | **Runtime** | None required — MercilessAuthority.exe is self-contained |
-| **PowerShell** | Only needed if recompiling from source (PS 7.5.4+) |
+| **PowerShell** | Only needed if recompiling from source (`PS 7.5.4+`) |
 | **Recompile tool** | Standard ps2exe v1.0.17 (`not ps2exe.core`) |
 | **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
 > **Note:** Windows Defender may flag this on first run due to keyboard hooks   
-> and force-shutdown behaviour. This is a false positive. Source code is fully   
-> open — read BatteryMercy.ps1 to verify exactly what runs.
+> and force-shutdown behaviour. This is a very false positive. Source code is fully   
+> open for you to read — try reading `BatteryMercy.ps1` and `RECOMPILE_GUIDE.ps1`  
+> to verify exactly what runs.  
+> And if you have any kind of AV software, add this to exclusions to  
+> further prevent from not working properly. *(Or not if you don't want to)*
 
 To **recompile** from source only, download the given files and this:
 - Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
@@ -99,7 +102,7 @@ After that, run in **Windows PowerShell 7.5.4+ as `Administrator`** then copy th
     -noError
 ```
 
-Or in this way when you copypaste it, it returns as reversed upside-down order:
+Or in this way when you copypaste it, if returns as reversed upside-down order:
 ```powershell
 Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScriptRoot\MercilessAuthority.exe" -iconFile "$PSScriptRoot\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
 ```
@@ -109,13 +112,14 @@ Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScript
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation and ✍️ How-To-Use it
 
 1. Download or clone this repository
 2. Place all files in the **same folder** (e.g. `C:\Scripts\` or anywhere you want)
-3. Place `holycleanAPP.ico` in the same folder
+3. Place `holycleanAPP.ico` in the same folder if it's not included.
 4. Right-click `CLICK_TO_RECOMPILE.vbs` → Run — this compiles `MercilessAuthority.exe`
-5. Set up Task Scheduler to run `LaunchBattery.vbs` at logon:
+5. Search up `Task Scheduler` in Startup Menu or in Search Bar in Taskbar
+6. Set up Task Scheduler to run `LaunchBattery.vbs` at logon:
    - Open Task Scheduler → Create Basic Task
    - Trigger: At log on
    - Action: Start a program → `wscript.exe`
