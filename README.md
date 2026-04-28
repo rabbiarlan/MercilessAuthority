@@ -143,7 +143,7 @@ Don't want the force-shutdown behaviour while testing? Run `BatteryMercy_TestRun
 pwsh -ExecutionPolicy Bypass -File BatteryMercy_TestRun.ps1
 ```
 
-Or these other optional harmless test run commands to try out:
+Or these other optional harmless test run commands to try out and wait for it to happen after enter:
 
 ```powershell
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario low
