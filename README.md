@@ -85,10 +85,10 @@ For the developers or some curious geeks like me who want to know what's actuall
 To **recompile** from source only, download the given files and this:
 - Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v0.5.0.33 by MScholtes](https://github.com/MScholtes/PS2EXE)
 
-Then do this first **CRITICAL FIRST STEP**	
-by running `Set-Location "C:\Scripts"`*(or path to your destitation)*
+Then open **Windows PowerShell 7.5.4+ as `Administrator`** and run this  
+**CRITICAL FIRST STEP** by typing `Set-Location "C:\Scripts"` *(or path to your destitation)*
 
-After that, run in **Windows PowerShell 7.5.4+ as `Administrator`** then copy this:
+After that, copy this:
 ```powershell
   Invoke-ps2exe `
     -inputFile   "$PSScriptRoot\BatteryMercy.ps1" `
