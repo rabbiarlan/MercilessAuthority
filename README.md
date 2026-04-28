@@ -1,6 +1,6 @@
 # ⚡ MercilessAuthority 🔋 — Totalitarian Battery Monitor   
 ## *💚🔋✅ No mercy. No remorse. No dead batteries. 🚫🪫❌*   
-### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor ever I made for fun!*   
+### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor I've ever made for fun!*   
 #### *Only for Windows Laptops that has functioning batteries!*
 
 **“This is apparently a Super high-attention very aggressive strict focus mode notifier battery percentage-management alert system that actively interrupts and reinforces awareness of battery status to prevent missed low-power situations.  
