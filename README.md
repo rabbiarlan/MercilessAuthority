@@ -118,9 +118,9 @@ Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.
 ## 🚀 Installation and ✍️ How-To-Use it
 
 1. Download or clone this repository
-2. Place all files in the **same folder** (e.g. `C:\Scripts\` or anywhere you want)
+2. Place all files in the **same folder** *(e.g. `C:\Scripts\` or anywhere you want)*
 3. Place `holycleanAPP.ico` in the same folder if it's not included.
-4. Right-click `CLICK_TO_RECOMPILE.vbs` → Run — this compiles `MercilessAuthority.exe`
+4. Right-click or Double-click `CLICK_TO_RECOMPILE.vbs` → Run — this compiles `MercilessAuthority.exe`
 5. Search up `Task Scheduler` in Startup Menu or in Search Bar in Taskbar
 6. Set up Task Scheduler to run `LaunchBattery.vbs` at logon:
    - Open Task Scheduler → Create Basic Task
