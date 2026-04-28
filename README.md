@@ -91,9 +91,9 @@ Then open **Windows PowerShell 7.5.4+ as `Administrator`** and run this
 After that, copy this:
 ```powershell
   Invoke-ps2exe `
-    -inputFile   "$PSScriptRoot\BatteryMercy.ps1" `
-    -outputFile  "$PSScriptRoot\MercilessAuthority.exe" `
-    -iconFile    "$PSScriptRoot\holycleanAPP.ico" `
+    -inputFile   ".\BatteryMercy.ps1" `
+    -outputFile  ".\MercilessAuthority.exe" `
+    -iconFile    ".\holycleanAPP.ico" `
     -title       "MERCILESS AUTHORITY" `
     -description "Totalitarian Battery Monitor — No Mercy, No Remorse" `
     -product     "BatteryMercy System" `
@@ -107,7 +107,7 @@ After that, copy this:
 
 Or in this way when you copypaste it, if returns as reversed upside-down order:
 ```powershell
-Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScriptRoot\MercilessAuthority.exe" -iconFile "$PSScriptRoot\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
+Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.exe" -iconFile ".\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
 ```
 
 > The pre-built `.exe` works on any Windows 10/11 machine.  
@@ -146,13 +146,13 @@ pwsh -ExecutionPolicy Bypass -File BatteryMercy_TestRun.ps1
 Or these other optional harmless test run commands to try out:
 
 ```powershell
-pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
+pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario low
 ```
 ```powershell
-pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
+pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario high
 ```
 ```powershell
-pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
+pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
 
 ---
