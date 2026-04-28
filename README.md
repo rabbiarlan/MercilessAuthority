@@ -72,7 +72,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Architecture** | x64 primary. ARM64 via Windows emulation layer. |
 | **Runtime** | None required — MercilessAuthority.exe is self-contained |
 | **PowerShell** | Only needed if recompiling from source (`PS 7.5.4+`) |
-| **Recompile tool** | Standard ps2exe v1.0.17 (`not ps2exe.core`) |
+| **Recompile tool** | Standard ps2exe v0.5.0.33 by MScholtes (`not ps2exe.core`) |
 | **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
 > **Note:** Windows Defender may flag this on first run due to keyboard hooks   
@@ -83,7 +83,10 @@ For the developers or some curious geeks like me who want to know what's actuall
 > further prevent from not working properly. *(Or not if you don't want to)*
 
 To **recompile** from source only, download the given files and this:
-- Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v1.0.17](https://github.com/MScholtes/PS2EXE)
+- Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v0.5.0.33 by MScholtes](https://github.com/MScholtes/PS2EXE)
+
+Then do this first **CRITICAL FIRST STEP**	
+by running `Set-Location "C:\Scripts"`*(or path to your destitation)*
 
 After that, run in **Windows PowerShell 7.5.4+ as `Administrator`** then copy this:
 ```powershell
