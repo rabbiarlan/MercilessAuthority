@@ -65,15 +65,15 @@
 #                FIX: Task → Properties → Actions tab → verify:
 #                     Program: wscript.exe
 #                     Arguments: //B "$PSScriptRoot\LaunchBattery.vbs"
-#                     Verify "$PSScriptRoot\LaunchBattery.vbs" exists AND that the 
+#                     Verify "$PSScriptRoot\LaunchBattery.vbs" exists AND that the
 #                     VBS script points to "$PSScriptRoot\MercilessAuthority.exe" correctly.
 #   0x80070003 = Path not found — the entire folder containing the script is missing
-#                FIX: Task → Properties → Actions tab → ensure "Start in (optional)" 
-#                     is set to C:\Scripts (without quotes) and that the 
+#                FIX: Task → Properties → Actions tab → ensure "Start in (optional)"
+#                     is set to C:\Scripts (without quotes) and that the
 #                     C:\Scripts folder actually exists on your drive.
 #   0x80070004 = The system cannot open the file — internal migration/locking error
-#                FIX: Usually occurs if the .exe is locked by an existing process 
-#                     or Antivirus. Kill 'MercilessAuthority.exe' in Task Manager 
+#                FIX: Usually occurs if the .exe is locked by an existing process
+#                     or Antivirus. Kill 'MercilessAuthority.exe' in Task Manager
 #                     before recompiling or re-running the task.
 #   0x80070005 = Access denied — missing "Run with highest privileges" ← DANGEROUS
 #                FIX: Task → Properties → General → tick "Run with highest privileges"
@@ -82,19 +82,30 @@
 #   0x800700B7 = Already running/Object exists — Global Mutex conflict
 #                FIX: A "ghost" instance of MercilessAuthority.exe is hung.
 #                     Open Task Manager → Details → Kill 'MercilessAuthority.exe'.
-#                     This happens if the script crashes but the Mutex handle 
+#                     This happens if the script crashes but the Mutex handle
 #                     isn't released, preventing the next logon launch.
 #   0x8007010B = Directory name invalid — "Start In" field contains quotes
-#                FIX: Task → Properties → Actions → Edit. Ensure the "Start in" 
+#                FIX: Task → Properties → Actions → Edit. Ensure the "Start in"
 #                     box contains C:\Scripts (ABSOLUTELY NO QUOTES allowed here).
 #   0x800700C1 = "Not a valid Win32 application"
-#                FIX: You compiled as 32-bit on a 64-bit OS. 
-#                     Ensure you are running "PowerShell 7 (x64)" specifically 
+#                FIX: You compiled as 32-bit on a 64-bit OS.
+#                     Ensure you are running "PowerShell 7 (x64)" specifically
 #                     when running the Invoke-ps2exe command.
 #   0x800704DD = Task won't run — "Run only when user is logged on" is unchecked
 #                FIX: Task → Properties → General → tick "Run only when user is logged on"
 # ───────────────────────────────────────────────────────────────────
 
+
+# ── CRITICAL FIRST STEP — Navigate to your scripts folder ──────────
+# $PSScriptRoot is EMPTY when running commands directly in the terminal.
+# You MUST cd to your scripts folder first or paths will break.
+# Run this BEFORE anything else:
+
+Set-Location "C:\Scripts"    # Change this to wherever your files actually are
+
+# Then verify you are in the right place:
+Get-ChildItem BatteryMercy.ps1   # Must return the file. If not, check your path.
+# ───────────────────────────────────────────────────────────────────
 # ── STEP 1 — KILL the running MercilessAuthority.exe ───────────────
 # The Global Mutex file-locks the .exe while it runs.
 # You CANNOT overwrite it while it's alive. Kill it first.
@@ -266,7 +277,7 @@ Get-ScheduledTask | Where-Object { $_.TaskName -like "*Battery*" -or $_.TaskName
 #   → Configure for: Windows 10 (works fine on Win11, don't change)
 #
 # NOTE: Designed for low-latency alerts
-#       Reliable single-instance enforcement using mutex  
+#       Reliable single-instance enforcement using mutex
 #       Possible fast popup response timing
 # ───────────────────────────────────────────────────────────────────
 
@@ -313,13 +324,13 @@ Get-ScheduledTask | Where-Object { $_.TaskName -like "*Battery*" -or $_.TaskName
 #        Never use Unrestricted — it disables ALL script security checks.)
 #
 # ERROR: "Icon file not found" even though you see it on Desktop
-# FIX:   OneDrive "un-downloaded" the icon. Right-click the .ico file 
+# FIX:   OneDrive "un-downloaded" the icon. Right-click the .ico file
 #        and select "Always keep on this device" before recompiling.
 #
 # ERROR: Memory usage is too low (< 5.0 MB) in Task Manager
 # FIX:   The PowerShell engine inside the .exe has crashed or failed to
 #        initialize the Runspace. This is a "Zombie Process."
-#        Kill 'MercilessAuthority.exe' and check BatteryMercy.ps1 for 
+#        Kill 'MercilessAuthority.exe' and check BatteryMercy.ps1 for
 #        syntax errors by running the .ps1 directly in pwsh first.
 #        or double-click the CLICK_TO_RECOMPILE.vbs file to recompile.
 #        But if it works after the popup message but it stays like <5.0MB

@@ -1,4 +1,4 @@
-﻿# VisualFX-BestAppearance.ps1
+# VisualFX-BestAppearance.ps1
 # ─────────────────────────────────────────────────────────────────────────────
 # Author  : Rabbi S. Arlan
 # Machine : HP ProBook mt22 — Celeron 5205U, 8GB DDR4-2400 RAM, 128GB M.2 SATA SSD
@@ -70,7 +70,95 @@ param(
     [switch]$Balanced,
     [switch]$EnsureStartup
 )
-Start-Sleep -Seconds 4
+
+# ─────────────────────────────────────────────────────────────────────────────
+# VISUAL FX SPLASH — lightweight non-blocking status window (auto-closes)
+# Inspired by BootSplash.ps1 animation pattern
+# ─────────────────────────────────────────────────────────────────────────────
+Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Drawing
+
+$splashJob = [System.Windows.Forms.Form]::new()
+$splashJob.FormBorderStyle = [System.Windows.Forms.FormBorderStyle]::None
+$splashJob.Size            = [System.Drawing.Size]::new(480, 110)
+$splashJob.StartPosition   = [System.Windows.Forms.FormStartPosition]::Manual
+$splashJob.BackColor       = [System.Drawing.Color]::FromArgb(10, 10, 20)
+$splashJob.Opacity         = 0.0
+$splashJob.TopMost         = $true
+$splashJob.ShowInTaskbar   = $false
+
+# Centre on primary screen
+$screen = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+$splashJob.Left = $screen.Left + ($screen.Width  - 480) / 2
+$splashJob.Top  = $screen.Top  + ($screen.Height - 110) / 2
+
+$titleLbl          = [System.Windows.Forms.Label]::new()
+$titleLbl.Text     = "⚡ MERCILESS AUTHORITY"
+$titleLbl.Font     = [System.Drawing.Font]::new("Segoe UI", 13, [System.Drawing.FontStyle]::Bold)
+$titleLbl.ForeColor= [System.Drawing.Color]::FromArgb(255, 80, 110)
+$titleLbl.AutoSize = $false
+$titleLbl.Size     = [System.Drawing.Size]::new(460, 32)
+$titleLbl.Location = [System.Drawing.Point]::new(10, 10)
+$titleLbl.TextAlign= [System.Drawing.ContentAlignment]::MiddleCenter
+
+$statusLbl          = [System.Windows.Forms.Label]::new()
+$statusLbl.Text     = "Applying Best Appearance Visual FX..."
+$statusLbl.Font     = [System.Drawing.Font]::new("Segoe UI", 9)
+$statusLbl.ForeColor= [System.Drawing.Color]::FromArgb(160, 160, 220)
+$statusLbl.AutoSize = $false
+$statusLbl.Size     = [System.Drawing.Size]::new(460, 22)
+$statusLbl.Location = [System.Drawing.Point]::new(10, 46)
+$statusLbl.TextAlign= [System.Drawing.ContentAlignment]::MiddleCenter
+
+$barTrack          = [System.Windows.Forms.Panel]::new()
+$barTrack.Size     = [System.Drawing.Size]::new(440, 6)
+$barTrack.Location = [System.Drawing.Point]::new(20, 78)
+$barTrack.BackColor= [System.Drawing.Color]::FromArgb(30, 30, 50)
+
+$barFill           = [System.Windows.Forms.Panel]::new()
+$barFill.Size      = [System.Drawing.Size]::new(0, 6)
+$barFill.Location  = [System.Drawing.Point]::new(0, 0)
+$barFill.BackColor = [System.Drawing.Color]::FromArgb(255, 80, 110)
+
+$barTrack.Controls.Add($barFill)
+$splashJob.Controls.AddRange(@($titleLbl, $statusLbl, $barTrack))
+
+$script:sfade = 0   # 0=fade-in 1=fill 2=fade-out
+$script:sbar  = 0
+$script:salpha= 0.0
+
+$sTimer = [System.Windows.Forms.Timer]::new()
+$sTimer.Interval = 16
+$sTimer.Add_Tick({
+    switch ($script:sfade) {
+        0 {
+            $script:salpha = [Math]::Min($script:salpha + 0.06, 0.92)
+            $splashJob.Opacity = $script:salpha
+            if ($script:salpha -ge 0.92) { $script:sfade = 1 }
+        }
+        1 {
+            $script:sbar = [Math]::Min($script:sbar + 5, 440)
+            $barFill.Width = $script:sbar
+            if ($script:sbar -ge 440) { $script:sfade = 2 }
+        }
+        2 {
+            $script:salpha = [Math]::Max($script:salpha - 0.05, 0.0)
+            $splashJob.Opacity = $script:salpha
+            if ($script:salpha -le 0.0) {
+                $sTimer.Stop()
+                $splashJob.Close()
+            }
+        }
+    }
+})
+
+$splashJob.Add_Shown({ $sTimer.Start() })
+
+# Show non-blocking — script continues applying FX while splash animates
+$splashJob.Show()
+[System.Windows.Forms.Application]::DoEvents()
+# ─────────────────────────────────────────────────────────────────────────────
+
 
 Add-Type -TypeDefinition @"
 using System;
