@@ -154,6 +154,7 @@ pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario h
 ```powershell
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
+You have to type `Set-Location "C:\Scripts"` *(or path to your destitation)* first or else error.
 
 ---
 
