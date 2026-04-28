@@ -14,7 +14,7 @@ It does not support in any other operating systems or in any legacy operating sy
 
 # ⚠️READ THIS FIRST BEFORE USE AT YOUR OWN RISK —Why It Looks Like Malware‼️ *(But It Isn't)*
 
-This app blocks Alt+Tab, the Win key, Ctrl+Esc, and many others till it goes fullscreen unclosable once it activates.   
+This app blocks `Alt+Tab`, the `Win key`, `Ctrl+Esc`, and many others till it goes fullscreen unclosable once it activates.   
 It forces you to click on the Red button that says: **“YES pwease, Master~!”** *(I'm sorry if you have to go through this bro...🙏)*
 
 **That's intentional.** Here's why:
@@ -72,7 +72,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Architecture** | x64 primary. ARM64 via Windows emulation layer. |
 | **Runtime** | None required — MercilessAuthority.exe is self-contained |
 | **PowerShell** | Only needed if recompiling from source (PS 7.5.4+) |
-| **Recompile tool** | Standard ps2exe v1.0.17 |
+| **Recompile tool** | Standard ps2exe v1.0.17 (`not ps2exe.core`) |
 | **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
 > **Note:** Windows Defender may flag this on first run due to keyboard hooks   
@@ -231,4 +231,4 @@ SOFTWARE.
 
 Built with AI-assisted pair programming (Claude Sonnet 4.6 Extended/Adaptive by Anthropic).  
 All architecture decisions, feature design, debugging direction, engineering concepts   
-and creative vision is all by Rabbi S. Arlan.
+and creative vision is all made by Rabbi S. Arlan.
