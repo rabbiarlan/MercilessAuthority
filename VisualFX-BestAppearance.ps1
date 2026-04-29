@@ -72,91 +72,237 @@ param(
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
-# VISUAL FX SPLASH — lightweight non-blocking status window (auto-closes)
-# Inspired by BootSplash.ps1 animation pattern
+# VISUAL FX SPLASH — fullscreen boot animation (exact BootSplash.ps1 pattern)
+# Fades in over darkened wallpaper, progress bar fills, fades out. Blocking.
 # ─────────────────────────────────────────────────────────────────────────────
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$splashJob = [System.Windows.Forms.Form]::new()
-$splashJob.FormBorderStyle = [System.Windows.Forms.FormBorderStyle]::None
-$splashJob.Size            = [System.Drawing.Size]::new(480, 110)
-$splashJob.StartPosition   = [System.Windows.Forms.FormStartPosition]::Manual
-$splashJob.BackColor       = [System.Drawing.Color]::FromArgb(10, 10, 20)
-$splashJob.Opacity         = 0.0
-$splashJob.TopMost         = $true
-$splashJob.ShowInTaskbar   = $false
+Add-Type -TypeDefinition @"
+using System;
+using System.Runtime.InteropServices;
+public class VisualFXSplashAPI {
+    [DllImport("user32.dll")] public static extern bool SetProcessDPIAware();
+    [DllImport("user32.dll")] public static extern IntPtr SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
+    public static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
+}
+"@
 
-# Centre on primary screen
-$screen = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
-$splashJob.Left = $screen.Left + ($screen.Width  - 480) / 2
-$splashJob.Top  = $screen.Top  + ($screen.Height - 110) / 2
+[VisualFXSplashAPI]::SetProcessDPIAware() | Out-Null
 
-$titleLbl          = [System.Windows.Forms.Label]::new()
-$titleLbl.Text     = "⚡ MERCILESS AUTHORITY"
-$titleLbl.Font     = [System.Drawing.Font]::new("Segoe UI", 13, [System.Drawing.FontStyle]::Bold)
-$titleLbl.ForeColor= [System.Drawing.Color]::FromArgb(255, 80, 110)
-$titleLbl.AutoSize = $false
-$titleLbl.Size     = [System.Drawing.Size]::new(460, 32)
-$titleLbl.Location = [System.Drawing.Point]::new(10, 10)
-$titleLbl.TextAlign= [System.Drawing.ContentAlignment]::MiddleCenter
+$vfxScreen = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+$vsw = [int]$vfxScreen.Width
+$vsh = [int]$vfxScreen.Height
 
-$statusLbl          = [System.Windows.Forms.Label]::new()
-$statusLbl.Text     = "Applying Best Appearance Visual FX..."
-$statusLbl.Font     = [System.Drawing.Font]::new("Segoe UI", 9)
-$statusLbl.ForeColor= [System.Drawing.Color]::FromArgb(160, 160, 220)
-$statusLbl.AutoSize = $false
-$statusLbl.Size     = [System.Drawing.Size]::new(460, 22)
-$statusLbl.Location = [System.Drawing.Point]::new(10, 46)
-$statusLbl.TextAlign= [System.Drawing.ContentAlignment]::MiddleCenter
-
-$barTrack          = [System.Windows.Forms.Panel]::new()
-$barTrack.Size     = [System.Drawing.Size]::new(440, 6)
-$barTrack.Location = [System.Drawing.Point]::new(20, 78)
-$barTrack.BackColor= [System.Drawing.Color]::FromArgb(30, 30, 50)
-
-$barFill           = [System.Windows.Forms.Panel]::new()
-$barFill.Size      = [System.Drawing.Size]::new(0, 6)
-$barFill.Location  = [System.Drawing.Point]::new(0, 0)
-$barFill.BackColor = [System.Drawing.Color]::FromArgb(255, 80, 110)
-
-$barTrack.Controls.Add($barFill)
-$splashJob.Controls.AddRange(@($titleLbl, $statusLbl, $barTrack))
-
-$script:sfade = 0   # 0=fade-in 1=fill 2=fade-out
-$script:sbar  = 0
-$script:salpha= 0.0
-
-$sTimer = [System.Windows.Forms.Timer]::new()
-$sTimer.Interval = 16
-$sTimer.Add_Tick({
-    switch ($script:sfade) {
-        0 {
-            $script:salpha = [Math]::Min($script:salpha + 0.06, 0.92)
-            $splashJob.Opacity = $script:salpha
-            if ($script:salpha -ge 0.92) { $script:sfade = 1 }
+# Darken current wallpaper for background
+function Get-VFXWallpaper {
+    param([int]$width, [int]$height)
+    $paths = @("$env:APPDATA\Microsoft\Windows\Themes\TranscodedWallpaper")
+    $regWall = (Get-ItemProperty "HKCU:\Control Panel\Desktop" -ErrorAction SilentlyContinue).Wallpaper
+    if ($regWall) { $paths += $regWall }
+    $src = $null
+    foreach ($p in $paths) {
+        if ($p -and (Test-Path $p)) {
+            try {
+                $bytes = [System.IO.File]::ReadAllBytes($p)
+                $ms = New-Object System.IO.MemoryStream($bytes, 0, $bytes.Length)
+                $src = [System.Drawing.Bitmap]::FromStream($ms)
+                break
+            } catch {}
         }
-        1 {
-            $script:sbar = [Math]::Min($script:sbar + 5, 440)
-            $barFill.Width = $script:sbar
-            if ($script:sbar -ge 440) { $script:sfade = 2 }
+    }
+    $result = New-Object System.Drawing.Bitmap($width, $height)
+    $g = [System.Drawing.Graphics]::FromImage($result)
+    $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+    if ($src) { $g.DrawImage($src, 0, 0, $width, $height); $src.Dispose() }
+    else { $g.Clear([System.Drawing.Color]::FromArgb(5, 0, 0)) }
+    $brush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(185, 0, 0, 0))
+    $g.FillRectangle($brush, 0, 0, $width, $height)
+    $brush.Dispose(); $g.Dispose()
+    return $result
+}
+
+$vfxWallBmp = Get-VFXWallpaper -width $vsw -height $vsh
+
+$vfxForm = New-Object System.Windows.Forms.Form
+$vfxForm.FormBorderStyle       = [System.Windows.Forms.FormBorderStyle]::None
+$vfxForm.StartPosition         = [System.Windows.Forms.FormStartPosition]::Manual
+$vfxForm.Bounds                = $vfxScreen
+$vfxForm.TopMost               = $true
+$vfxForm.ShowInTaskbar         = $false
+$vfxForm.BackgroundImage       = $vfxWallBmp
+$vfxForm.BackgroundImageLayout = [System.Windows.Forms.ImageLayout]::Stretch
+$vfxForm.BackColor             = [System.Drawing.Color]::FromArgb(5, 0, 0)
+$vfxForm.Opacity               = 0.0
+
+$iconPath = Join-Path $PSScriptRoot "holycleanAPP.ico"
+if (Test-Path $iconPath) {
+    try { $s = [System.IO.File]::OpenRead($iconPath); $vfxForm.Icon = New-Object System.Drawing.Icon($s); $s.Close() } catch {}
+}
+
+# Red accent bars top and bottom
+$vfxTBar = New-Object System.Windows.Forms.Panel
+$vfxTBar.BackColor = [System.Drawing.Color]::FromArgb(200, 0, 0)
+$vfxTBar.Size      = New-Object System.Drawing.Size($vsw, 5)
+$vfxTBar.Location  = New-Object System.Drawing.Point(0, 0)
+$vfxForm.Controls.Add($vfxTBar)
+
+$vfxBBar = New-Object System.Windows.Forms.Panel
+$vfxBBar.BackColor = [System.Drawing.Color]::FromArgb(200, 0, 0)
+$vfxBBar.Size      = New-Object System.Drawing.Size($vsw, 5)
+$vfxBBar.Location  = New-Object System.Drawing.Point(0, $vsh - 5)
+$vfxForm.Controls.Add($vfxBBar)
+
+# Title
+$vfxTitleFontSz = [Math]::Max(20, [int]($vsh / 35))
+$vfxTitleLbl = New-Object System.Windows.Forms.Label
+$vfxTitleLbl.Text      = "MERCILESS AUTHORITY"
+$vfxTitleLbl.ForeColor = [System.Drawing.Color]::FromArgb(255, 60, 60)
+$vfxTitleLbl.BackColor = [System.Drawing.Color]::Transparent
+$vfxTitleLbl.Font      = New-Object System.Drawing.Font("Segoe UI", $vfxTitleFontSz, [System.Drawing.FontStyle]::Bold)
+$vfxTitleLbl.TextAlign = [System.Drawing.ContentAlignment]::MiddleCenter
+$vfxTitleLbl.Size      = New-Object System.Drawing.Size([int]($vsw * 0.8), [int]($vsh * 0.12))
+$vfxTitleLbl.Location  = New-Object System.Drawing.Point([int](($vsw - $vfxTitleLbl.Width) / 2), [int]($vsh * 0.28))
+$vfxForm.Controls.Add($vfxTitleLbl)
+
+# Subtitle
+$vfxSubFontSz = [Math]::Max(10, [int]($vsh / 72))
+$vfxSubLbl = New-Object System.Windows.Forms.Label
+$vfxSubLbl.Text      = "APPLYING BEST APPEARANCE VISUAL FX — PLEASE WAIT"
+$vfxSubLbl.ForeColor = [System.Drawing.Color]::FromArgb(180, 180, 180)
+$vfxSubLbl.BackColor = [System.Drawing.Color]::Transparent
+$vfxSubLbl.Font      = New-Object System.Drawing.Font("Segoe UI", $vfxSubFontSz, [System.Drawing.FontStyle]::Regular)
+$vfxSubLbl.TextAlign = [System.Drawing.ContentAlignment]::MiddleCenter
+$vfxSubLbl.Size      = New-Object System.Drawing.Size([int]($vsw * 0.8), [int]($vsh * 0.06))
+$vfxSubLbl.Location  = New-Object System.Drawing.Point([int](($vsw - $vfxSubLbl.Width) / 2), [int]($vsh * 0.40))
+$vfxForm.Controls.Add($vfxSubLbl)
+
+# Step label
+$vfxStepFontSz = [Math]::Max(9, [int]($vsh / 80))
+$vfxStepLbl = New-Object System.Windows.Forms.Label
+$vfxStepLbl.Text      = "Initializing..."
+$vfxStepLbl.ForeColor = [System.Drawing.Color]::FromArgb(200, 200, 200)
+$vfxStepLbl.BackColor = [System.Drawing.Color]::Transparent
+$vfxStepLbl.Font      = New-Object System.Drawing.Font("Segoe UI", $vfxStepFontSz, [System.Drawing.FontStyle]::Regular)
+$vfxStepLbl.TextAlign = [System.Drawing.ContentAlignment]::MiddleCenter
+$vfxStepLbl.Size      = New-Object System.Drawing.Size([int]($vsw * 0.6), [int]($vsh * 0.05))
+$vfxStepLbl.Location  = New-Object System.Drawing.Point([int](($vsw - $vfxStepLbl.Width) / 2), [int]($vsh * 0.54))
+$vfxForm.Controls.Add($vfxStepLbl)
+
+# Progress bar
+$vfxBarW = [int]($vsw * 0.50)
+$vfxBarH = [int]([Math]::Max(6, $vsh * 0.008))
+$vfxBarX = [int](($vsw - $vfxBarW) / 2)
+$vfxBarY = [int]($vsh * 0.61)
+
+$vfxBarTrack = New-Object System.Windows.Forms.Panel
+$vfxBarTrack.BackColor = [System.Drawing.Color]::FromArgb(40, 40, 40)
+$vfxBarTrack.Size      = New-Object System.Drawing.Size($vfxBarW, $vfxBarH)
+$vfxBarTrack.Location  = New-Object System.Drawing.Point($vfxBarX, $vfxBarY)
+$vfxForm.Controls.Add($vfxBarTrack)
+
+$vfxBarFill = New-Object System.Windows.Forms.Panel
+$vfxBarFill.BackColor = [System.Drawing.Color]::FromArgb(200, 0, 0)
+$vfxBarFill.Size      = New-Object System.Drawing.Size(0, $vfxBarH)
+$vfxBarFill.Location  = New-Object System.Drawing.Point(0, 0)
+$vfxBarTrack.Controls.Add($vfxBarFill)
+
+# Version label
+$vfxVerLbl = New-Object System.Windows.Forms.Label
+$vfxVerLbl.Text      = "VisualFX v1.3 — Rabbi S. Arlan"
+$vfxVerLbl.ForeColor = [System.Drawing.Color]::FromArgb(90, 90, 90)
+$vfxVerLbl.BackColor = [System.Drawing.Color]::Transparent
+$vfxVerLbl.Font      = New-Object System.Drawing.Font("Segoe UI", [Math]::Max(8, [int]($vsh/90)), [System.Drawing.FontStyle]::Regular)
+$vfxVerLbl.TextAlign = [System.Drawing.ContentAlignment]::MiddleCenter
+$vfxVerLbl.Size      = New-Object System.Drawing.Size([int]($vsw * 0.4), 30)
+$vfxVerLbl.Location  = New-Object System.Drawing.Point([int](($vsw - $vfxVerLbl.Width) / 2), [int]($vsh * 0.66))
+$vfxForm.Controls.Add($vfxVerLbl)
+
+# Animation state — 4 phases matching BootSplash pattern
+$script:vfxPhase   = 0      # 0=fade-in 1=step1 2=step2 3=step3 4=step4 5=done 6=fade-out
+$script:vfxOpacity = 0.0
+$script:vfxBarCur  = 0.0
+$script:vfxBarTgt  = 5.0
+$script:vfxTick    = 0
+
+$vfxSteps = @(
+    @{ target=0.20; label="Registering Visual FX registry keys...";         color=[System.Drawing.Color]::FromArgb(200,200,200) },
+    @{ target=0.45; label="Applying SystemParametersInfo to live session..."; color=[System.Drawing.Color]::FromArgb(200,200,200) },
+    @{ target=0.75; label="Broadcasting WM_SETTINGCHANGE to all windows..."; color=[System.Drawing.Color]::FromArgb(200,200,200) },
+    @{ target=1.00; label="VISUAL FX DOMINATION COMPLETE. GG NO RE.";        color=[System.Drawing.Color]::FromArgb(80,220,80) }
+)
+$script:vfxStep = 0
+
+$vfxTimer = New-Object System.Windows.Forms.Timer
+$vfxTimer.Interval = 16
+
+$vfxTimer.Add_Tick({
+    $script:vfxTick++
+
+    # Smooth bar interpolation always running
+    $delta = $script:vfxBarTgt - $script:vfxBarCur
+    if ([Math]::Abs($delta) -lt 0.3) { $script:vfxBarCur = $script:vfxBarTgt }
+    else { $script:vfxBarCur += $delta * 0.07 }
+    $vfxBarFill.Width = [Math]::Max(0, [Math]::Min($vfxBarW, [int]$script:vfxBarCur))
+
+    # PHASE 0: Fade in
+    if ($script:vfxPhase -eq 0) {
+        $script:vfxOpacity += 0.045
+        if ($script:vfxOpacity -ge 1.0) { $script:vfxOpacity = 1.0; $script:vfxPhase = 1 }
+        $vfxForm.Opacity = $script:vfxOpacity
+        return
+    }
+
+    # PHASE 1-4: Step through labels every ~600ms
+    if ($script:vfxPhase -ge 1 -and $script:vfxPhase -le 4) {
+        $stepIdx = $script:vfxPhase - 1
+        if ($stepIdx -lt $vfxSteps.Count) {
+            $s = $vfxSteps[$stepIdx]
+            $vfxStepLbl.Text      = $s.label
+            $vfxStepLbl.ForeColor = $s.color
+            $script:vfxBarTgt     = $vfxBarW * $s.target
         }
-        2 {
-            $script:salpha = [Math]::Max($script:salpha - 0.05, 0.0)
-            $splashJob.Opacity = $script:salpha
-            if ($script:salpha -le 0.0) {
-                $sTimer.Stop()
-                $splashJob.Close()
-            }
+        if ($script:vfxTick % 37 -eq 0) { $script:vfxPhase++ }
+        return
+    }
+
+    # PHASE 5: Hold on final message until bar reaches 100%
+    if ($script:vfxPhase -eq 5) {
+        if ([Math]::Abs($script:vfxBarCur - $vfxBarW) -lt 2) {
+            $script:vfxTick = 0
+            $script:vfxPhase = 6
         }
+        return
+    }
+
+    # PHASE 6: Fade out
+    if ($script:vfxPhase -eq 6) {
+        $script:vfxOpacity -= 0.055
+        if ($script:vfxOpacity -le 0.0) {
+            $script:vfxOpacity = 0.0
+            $vfxTimer.Stop()
+            $vfxForm.Close()
+        }
+        $vfxForm.Opacity = $script:vfxOpacity
     }
 })
 
-$splashJob.Add_Shown({ $sTimer.Start() })
+$vfxForm.Add_Click({ $script:vfxPhase = 6 })
+$vfxForm.KeyPreview = $true
+$vfxForm.Add_KeyDown({
+    param($s, $e)
+    if ($e.KeyCode -eq [System.Windows.Forms.Keys]::Escape) { $script:vfxPhase = 6 }
+})
 
-# Show non-blocking — script continues applying FX while splash animates
-$splashJob.Show()
-[System.Windows.Forms.Application]::DoEvents()
+$vfxForm.Add_Shown({
+    [VisualFXSplashAPI]::SetWindowPos($vfxForm.Handle, [VisualFXSplashAPI]::HWND_TOPMOST, 0, 0, 0, 0, 0x0003) | Out-Null
+    $vfxTimer.Start()
+})
+
+$vfxForm.ShowDialog() | Out-Null
+try { $vfxTimer.Stop(); $vfxTimer.Dispose() } catch {}
+try { $vfxWallBmp.Dispose() } catch {}
+try { $vfxForm.Dispose() } catch {}
 # ─────────────────────────────────────────────────────────────────────────────
 
 

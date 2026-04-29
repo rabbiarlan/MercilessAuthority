@@ -22,9 +22,9 @@ It forces you to click on the Red button that says: **“YES pwease, Master~!”
 If your laptop **dies at approximately less than 10%** because of a tiny toast notification was easy to ignore, you will lose unsaved work and the effects are irreversible. MercilessAuthority fixes this issue and makes the alert **VERY IMPOSSIBLE to IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
 Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried `Ctrl+Alt+Del` after initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
 
-The source code is fully publicly explictly open. You can read every single line one by one line by line precisely carefully before running anything in some systems or in yours.
+The source code is fully publicly explicitly open. You can read every single line one by one line by line precisely carefully before running anything in some systems or in yours.
 
-**This is not a very suspicious malware.** It is a very aggressively opinionated battery management software that I have created just for fun.
+**This is not malware.** It is a very aggressively opinionated battery management software that I have created just for fun.
 
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
@@ -86,7 +86,7 @@ To **recompile** from source only, download the given files and this:
 - Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v0.5.0.33 by MScholtes](https://github.com/MScholtes/PS2EXE)
 
 Then open **Windows PowerShell 7.5.4+ as `Administrator`** and run this  
-**CRITICAL FIRST STEP** by typing `Set-Location "C:\Scripts"` *(or path to your destitation)*
+**CRITICAL FIRST STEP** by typing `Set-Location "C:\Scripts"` *(or path to your destination)*
 
 After that, copy this:
 ```powershell
@@ -105,10 +105,6 @@ After that, copy this:
     -noError
 ```
 
-Or in this way when you copypaste it, if returns as reversed upside-down order:
-```powershell
-Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.exe" -iconFile ".\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
-```
 
 > The pre-built `.exe` works on any Windows 10/11 machine.  
 > No PowerShell. No .NET install. No dependencies. Just run it.
@@ -154,7 +150,7 @@ pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario h
 ```powershell
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
-You have to type `Set-Location "C:\Scripts"` *(or path to your destitation)* first or else error.
+You have to type `Set-Location "C:\Scripts"` *(or path to your destination)* first or else error.
 
 ---
 
@@ -240,3 +236,20 @@ SOFTWARE.
 Built with AI-assisted pair programming (Claude Sonnet 4.6 Extended/Adaptive by Anthropic).  
 All architecture decisions, feature design, debugging direction, engineering concepts   
 and creative vision is all made by Rabbi S. Arlan.
+
+---
+
+## 🚧 Beta Status
+
+> **This project is currently in public beta (v2.21).**
+> Core features are fully functional and stable on the developer's hardware
+> (HP ProBook mt22, Windows 11 25H2 Pro, Intel Celeron 5205U, 1080p display).
+> Behaviour on other hardware has not been fully verified yet.
+>
+> **Known limitations:**
+> - UI scaling not yet optimized for 4K (200%+ DPI) displays
+> - Slideshow wallpaper feature requires an OneDrive Desktop folder to exist
+> - Not tested on Windows 10 ARM64 or non-standard display configurations
+>
+> Bug reports and feedback welcome via GitHub Issues.
+> Full stable release planned for **v3.0**.

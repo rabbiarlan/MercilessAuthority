@@ -931,7 +931,7 @@ try {
             # Show-Merciless-Message blocks until YES clicked OR 60s countdown hits zero.
             # After form closes, check AC status — still unplugged = Stop-Computer fires.
             if ($acLine -eq 0 -and $percent -le 10) {
-                Show-Merciless-Message "DEADMAN's SWITCH ACTIVATED: TERMINATION IMMINENT. PLUG IN RIGHT NOW OR ELSE NO SECOND CHANCE, NO SECOND OPTION AND NO SAVED PROGRESS. THE MACHINE DIES WHEN COMPROMISED, LIKE YOU IN LIFE SOON..."
+                Show-Merciless-Message "DEADMAN'S SWITCH ACTIVATED: TERMINATION IMMINENT. PLUG IN RIGHT NOW OR ELSE NO SECOND CHANCE, NO SECOND OPTION AND NO SAVED PROGRESS. THE MACHINE DIES WHEN COMPROMISED, LIKE YOU IN LIFE SOON..."
                 $checkPS = [BatteryAPI]::Get()
                 if ([int]$checkPS.ACLineStatus -eq 0) { Stop-Computer -Force }
             }

@@ -153,9 +153,9 @@ Test-Path "$PSScriptRoot\BatteryMercy.ps1"
 # Copy-paste this entire block as-is:
 
 Invoke-ps2exe `
-    -inputFile   "$PSScriptRoot\BatteryMercy.ps1" `
-    -outputFile  "$PSScriptRoot\MercilessAuthority.exe" `
-    -iconFile    "$PSScriptRoot\holycleanAPP.ico" `
+    -inputFile   ".\BatteryMercy.ps1" `
+    -outputFile  ".\MercilessAuthority.exe" `
+    -iconFile    ".\holycleanAPP.ico" `
     -title       "MERCILESS AUTHORITY" `
     -description "Totalitarian Battery Monitor — No Mercy, No Remorse" `
     -product     "BatteryMercy System" `
@@ -168,7 +168,7 @@ Invoke-ps2exe `
 
 #Or in this way when you copypaste it, it returns as reversed upside-down order:
 
-Invoke-ps2exe -inputFile "$PSScriptRoot\BatteryMercy.ps1" -outputFile "$PSScriptRoot\MercilessAuthority.exe" -iconFile "$PSScriptRoot\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
+Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.exe" -iconFile ".\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor - No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
 
 # WHAT EACH FLAG DOES:
 # -title       → "Description" column in Task Manager (Details tab) — shows "MERCILESS AUTHORITY"
