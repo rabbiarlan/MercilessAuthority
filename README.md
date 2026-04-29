@@ -164,13 +164,13 @@ You have to type `Set-Location "C:\path\to\Scripts"` first or else error.
 ## 📁 File Structure inside Scripts Folder
 
 ```
-MercilessAuthority/
+MercilessAuthority\
 │   *(These "Archive" and "Pictures of what it looks like" folders
 │     is very optional to keep. My set default location is C:\Scripts)
-├── Archive/
+├── Archive\
 │   ├──MercyPopup_v3.11_RETIRED.ps1
 │   └──Recompile.ps1
-├── Pictures of what it looks like/
+├── Pictures of what it looks like\
 │   ├──And this intimidating warning.png
 │   ├──It also shows your current background.png
 │   └──Now you can't ignore these!.png
