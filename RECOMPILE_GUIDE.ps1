@@ -27,9 +27,9 @@
 #   Double-click CLICK_TO_RECOMPILE.vbs → animated window does everything.
 #
 # TESTRUN COMMANDS (add -ExecutionPolicy Bypass — required for unsigned .ps1):
-#   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
-#   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
-#   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
+#   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario low
+#   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario high
+#   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 #   (Deadman's switch scenario will NOT call Stop-Computer — safe to test)
 #
 # TASK SCHEDULER STATUS CODES — these are NOT errors (normal):
@@ -101,7 +101,7 @@
 # You MUST cd to your scripts folder first or paths will break.
 # Run this BEFORE anything else:
 
-Set-Location "C:\Scripts"    # Change this to wherever your files actually are
+Set-Location "C:\path\to\your\MercilessAuthority\folder"    # Change to wherever YOUR files are
 
 # Then verify you are in the right place:
 Get-ChildItem BatteryMercy.ps1   # Must return the file. If not, check your path.
@@ -132,8 +132,7 @@ Install-Module -Name ps2exe -Scope CurrentUser -Force
 # ── STEP 3 — VERIFY the icon file exists ───────────────────────────
 # Run this SEPARATELY:
 
-$iconPath = Join-Path $PSScriptRoot "holycleanAPP.ico"
-Test-Path $iconPath
+Test-Path ".\holycleanAPP.ico"
 
 # Must return True. If False, the icon path is wrong — check spelling.
 # ───────────────────────────────────────────────────────────────────
@@ -141,7 +140,7 @@ Test-Path $iconPath
 
 # ── STEP 4 — VERIFY the source script exists ───────────────────────
 
-Test-Path "$PSScriptRoot\BatteryMercy.ps1"
+Test-Path ".\BatteryMercy.ps1"
 
 # Must return True.
 # ───────────────────────────────────────────────────────────────────
@@ -193,7 +192,7 @@ Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.
 
 # ── STEP 6 — VERIFY the .exe was created ───────────────────────────
 
-Test-Path "$PSScriptRoot\MercilessAuthority.exe"
+Test-Path ".\MercilessAuthority.exe"
 
 # Must return True. If False, go back and check Step 5 for red error text.
 # ───────────────────────────────────────────────────────────────────
@@ -221,16 +220,16 @@ Test-Path "$PSScriptRoot\MercilessAuthority.exe"
 # ── STEP 8 — TEST RUN (manual, not via Task Scheduler yet) ─────────
 # Run this SEPARATELY to confirm it launches with no errors:
 
-Start-Process "$PSScriptRoot\MercilessAuthority.exe"
+Start-Process ".\MercilessAuthority.exe"
 
 # Then check Task Manager → Details tab.
 # You should see:   MercilessAuthority.exe | MERCILESS AUTHORITY
 # Under the "Description" column in Details tab.
 #
 # To test all 3 popup modes manually (run each separately in pwsh as Admin):
-#   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
-#   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
-#   pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
+#   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario low
+#   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario high
+#   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 # NOTE: Deadman's switch scenario will NOT call Stop-Computer in TestRun — safe.
 # ───────────────────────────────────────────────────────────────────
 
