@@ -86,7 +86,7 @@ To **recompile** from source only, download the given files and this:
 - Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v0.5.0.33 by MScholtes](https://github.com/MScholtes/PS2EXE)
 
 Then open **Windows PowerShell 7.5.4+ as `Administrator`** and run this  
-**CRITICAL FIRST STEP** by typing `Set-Location "C:\Scripts"` *(or path to your destination)*
+**CRITICAL STEP** by typing `Set-Location "C:\path\to\Scripts"` first or else error.
 
 After that, copy this:
 ```powershell
@@ -105,6 +105,10 @@ After that, copy this:
     -noError
 ```
 
+Or this if returns reversed:
+```powershell
+Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.exe" -iconFile ".\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor — No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
+```
 
 > The pre-built `.exe` works on any Windows 10/11 machine.  
 > No PowerShell. No .NET install. No dependencies. Just run it.
@@ -139,7 +143,7 @@ Don't want the force-shutdown behaviour while testing? Run `BatteryMercy_TestRun
 pwsh -ExecutionPolicy Bypass -File BatteryMercy_TestRun.ps1
 ```
 
-Or these other optional harmless test run commands to try out and wait for it to happen after enter:
+Or these other optional harmless test run commands to try it out right now:
 
 ```powershell
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario low
@@ -150,14 +154,23 @@ pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario h
 ```powershell
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
-You have to type `Set-Location "C:\Scripts"` *(or path to your destination)* first or else error.
+You have to type `Set-Location "C:\path\to\Scripts"` first or else error.
 
 ---
 
-## 📁 File Structure
+## 📁 File Structure inside Scripts Folder
 
 ```
 MercilessAuthority/
+│   *(These "Archive" and "Pictures of what it looks like"
+│                          is very optional to keep)
+├── Archive/
+│   ├──MercyPopup_v3.11_RETIRED.ps1
+│   └──Recompile.ps1
+├── Pictures of what it looks like/
+│   ├──And this intimidating warning.png
+│   ├──It also shows your current background.png
+│   └──Now you can't ignore these!.png
 ├── BatteryMercy.ps1            ← Main source (compile this)
 ├── BatteryMercy_TestRun.ps1    ← Safe test, no shutdown
 ├── BootSplash.ps1              ← Boot splash screen
@@ -166,6 +179,7 @@ MercilessAuthority/
 ├── LaunchBattery.vbs           ← Launcher (use in Task Scheduler)
 ├── RECOMPILE_GUIDE.ps1         ← Detailed recompile instructions
 ├── VisualFX-BestAppearance.ps1 ← Sets Windows visual FX on startup (this is optional)
+├── LICENSE                     ← MIT License
 ├── MercilessAuthority.exe      ← Compiled executable (pre-built)
 ├── holycleanAPP.ico            ← App icon (must be in same folder)
 └── README.md                   ← This file
