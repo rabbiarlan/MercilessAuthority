@@ -249,8 +249,8 @@ SOFTWARE.
 > THIS APPLICATION TOOL IS AN EDUCATIONAL SYSTEM AUTOMATION  
 > PURPOSES PROJECT TO PUSH THE LIMITS OF DRASTICALLY ENHACING  
 > BATTERY LONGEVITY, HEALTH LEVELS AND DURATION AT ALL COSTS.  
-> And also it has `No system-level persistence, no network activity,  
-> and lastly no data collection.` *(Who needs that pile of junk in their code...?)*
+> And also it has `No system-level persistence, no network activity,`  
+> `and lastly no data collection.` *(Who needs that pile of junk in their code...?)*
 
 ---
 
