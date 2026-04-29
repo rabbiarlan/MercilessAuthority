@@ -162,8 +162,8 @@ You have to type `Set-Location "C:\path\to\Scripts"` first or else error.
 
 ```
 MercilessAuthority/
-│       *(These "Archive" and "Pictures of what it looks like"
-│         folders is very optional to keep)
+│   *(These "Archive" and "Pictures of what it looks like" folders
+│     is very optional to keep. My set default location is C:\Scripts)
 ├── Archive/
 │   ├──MercyPopup_v3.11_RETIRED.ps1
 │   └──Recompile.ps1
