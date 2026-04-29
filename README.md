@@ -172,7 +172,7 @@ MercilessAuthority\
 │   └──Recompile.ps1
 ├── Pictures of what it looks like\
 │   ├──And this intimidating warning.png
-│   ├──It also shows your current background.png
+│   ├──It also shows your current background too.png
 │   └──Now you can't ignore these!.png
 ├── BatteryMercy.ps1            ← Main source (compile this)
 ├── BatteryMercy_TestRun.ps1    ← Safe test, no shutdown
@@ -200,7 +200,7 @@ MercilessAuthority\
 | v2.8 | Mar 15, 2026 | True zero-delay: popup runs in same process via STA Runspace. |
 | v2.9 | Mar 16, 2026 | Iron Curtain: Win key + all hotkeys blocked. |
 | v2.11 | Mar 19, 2026 | Three distinct melodic beeps. DEAD countdown. Force shutdown. |
-| v2.20 | Mar 20, 2026 | Final polish: DPI-proof layout, GDI ghost text eliminated, full animation system. |
+| v2.20 | Mar 20, 2026 | Final polishings: DPI-proof layout, GDI ghost text eliminated, full animation system. |
 | v2.21 | Apr 27, 2026 | Finally revealing this to the public. Universal paths — works on any Windows account on any machine. |
 
 Full changelog inside `BatteryMercy.ps1` header.
@@ -265,18 +265,17 @@ and creative vision is all made by Rabbi S. Arlan.
 ## 🚧 Beta Status
 
 > ### **This single-person project is currently in public beta (v2.21).**
-> Core features are fully functional and stable on the developer's hardware:
-> (HP ProBook mt22, Windows 11 25H2 Pro, Intel Celeron 5205U, 1920x1080p)
-> Behaviour on other hardware has not been fully verified yet, so give fully
+> Core features are fully functional and stable on the developer's hardware.  
+> Behaviour on other hardware has not been fully verified yet, so please give fully  
 > detailed information about your insights of your experience of this project.
 >
 > **Known Limitations(Beware):**
-> - UI scaling not yet optimized for 4K (200%+ DPI) displays.
-> - Slideshow wallpaper feature requires a OneDrive Desktop folder to exist.
-> - *(My apologies but try check inside the codes to fully fix the paths)*
-> - Not tested on Windows 10 & ARM64 or non-standard display configurations.
-> - *(I have a 13 year old Japanese Lenovo ThinkPad E540 Laptop but did not try there because it's dead)*
+> - UI scaling not yet optimized for 4K (200%+ DPI) displays.  
+> - Slideshow wallpaper feature requires a OneDrive Desktop folder to exist.  
+> - *(My apologies but try check inside the codes to fully fix the paths)*  
+> - Not tested on Windows 10 & ARM64 or non-standard display configurations.  
+> - *(I have a 13 year old Japanese Lenovo ThinkPad E540 Laptop but did not try there because it's dead)*  
 > - And many more that has yet to come.
 >
-> ### Bug reports and feedback will be welcomed via GitHub Issues or in this project.
-> ### Full official stable release planned for **v3.0**.
+> ### Full Official Very Stable Release Planned for **v3.0** in the upcoming future.
+> ### Bug reports and feedbacks will be welcomed via GitHub Issues or in this project.
