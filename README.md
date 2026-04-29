@@ -17,7 +17,9 @@ It does not support in any other operating systems or in any legacy operating sy
 This app blocks `Alt+Tab`, the `Win key`, `Ctrl+Esc`, and many others till it goes fullscreen unclosable once it activates.   
 It forces you to click on the Red button that says: **“YES pwease, Master~!”** *(I'm sorry if you have to go through this bro...🙏)*
 
-**That's intentional.** Here's why:
+**That's intentional. Making you suffer while manually maintaining your battery duration and health drastically**
+
+### Here's why:
 
 If your laptop **dies at approximately less than 10%** because of a tiny toast notification was easy to ignore, you will lose unsaved work and the effects are irreversible. MercilessAuthority fixes this issue and makes the alert **VERY IMPOSSIBLE to IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
 Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried `Ctrl+Alt+Del` after initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
