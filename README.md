@@ -17,7 +17,7 @@ It does not support in any other operating systems or in any legacy operating sy
 This app blocks `Alt+Tab`, the `Win key`, `Ctrl+Esc`, and many others till it goes fullscreen unclosable once it activates.   
 It forces you to click on the Red button that says: **“YES pwease, Master~!”** *(I'm sorry if you have to go through this bro...🙏)*
 
-**That's intentional. Making you suffer while manually maintaining your battery duration and health drastically**
+**That's intentional. Making you suffer while manually maintaining your battery duration and health drastically.**
 
 ### Here's why:
 
@@ -77,7 +77,8 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Recompile tool** | Standard ps2exe v0.5.0.33 by MScholtes (`not ps2exe.core`) |
 | **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
-> **Note:** Windows Defender may flag this on first run due to keyboard hooks   
+> ### **Notes:**  
+> Windows Defender may flag this on first run due to keyboard hooks   
 > and force-shutdown behaviour. This is a very false positive. Source code is fully   
 > open for you to read — try reading `BatteryMercy.ps1` and `RECOMPILE_GUIDE.ps1`  
 > to verify exactly what runs.  
@@ -238,12 +239,18 @@ SOFTWARE.
 
 ## 👮 Other Infos
 
-> **DO NOT USE THIS AS A PRANK OR IN OTHER FORMS OF HILARIOUS SITUATIONS PLEASE! :(**   
-> DO SO WITH YOUR CONSENT WITH FROM OTHERS AND IF YOU HAVE BEEN GRANTED A GIVEN PERMISSION WITH ABILITY TO USE IT   
-> I DO NOT HAVE ANY FORMS OF RESPONSIBILITY FOR ANY IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM  
+> **DO NOT USE THIS AS A PRANK OR IN OTHER  
+> FORMS OF HILARIOUS SITUATIONS PLEASE! 😭️🙏️☠️🥀️**   
+> DO SO WITH YOUR CONSENT WITH FROM OTHERS AND IF YOU  
+> HAVE BEEN GRANTED A GIVEN PERMISSION WITH ABILITY TO USE IT   
+> I DO NOT HAVE ANY FORMS OF RESPONSIBILITY FOR ANY  
+> IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM  
 > BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO  
-> BECAUSE THIS TOOL IS AN EDUCATIONAL/SYSTEM AUTOMATION PURPOSES PROJECT.   
-> And also it has `No system-level persistence, no network activity, and lastly no data collection.`*(Who needs that pile of junk in their code...?)*
+> BECAUSE THIS APPLICATION TOOL IS AN EDUCATIONAL SYSTEM AUTOMATION  
+> PURPOSES PROJECT TO PUSH THE LIMITS OF DRASTICALLY ENHACING  
+> BATTERY HEALTH LEVELS AND DURATION AT THE SAME TIME.
+> And also it has `No system-level persistence, no network activity,  
+> and lastly no data collection.` *(Who needs that pile of junk in their code...?)*
 
 ---
 
@@ -257,15 +264,19 @@ and creative vision is all made by Rabbi S. Arlan.
 
 ## 🚧 Beta Status
 
-> **This project is currently in public beta (v2.21).**
-> Core features are fully functional and stable on the developer's hardware
-> (HP ProBook mt22, Windows 11 25H2 Pro, Intel Celeron 5205U, 1080p display).
-> Behaviour on other hardware has not been fully verified yet.
+> ### **This single-person project is currently in public beta (v2.21).**
+> Core features are fully functional and stable on the developer's hardware:
+> (HP ProBook mt22, Windows 11 25H2 Pro, Intel Celeron 5205U, 1920x1080p)
+> Behaviour on other hardware has not been fully verified yet, so give fully
+> detailed information about your insights of your experience of this project.
 >
-> **Known limitations:**
-> - UI scaling not yet optimized for 4K (200%+ DPI) displays
-> - Slideshow wallpaper feature requires an OneDrive Desktop folder to exist
-> - Not tested on Windows 10 ARM64 or non-standard display configurations
+> **Known Limitations(Beware):**
+> - UI scaling not yet optimized for 4K (200%+ DPI) displays.
+> - Slideshow wallpaper feature requires a OneDrive Desktop folder to exist.
+> - *(My apologies but try check inside the codes to fully fix the paths)*
+> - Not tested on Windows 10 & ARM64 or non-standard display configurations.
+> - *(I have a 13 year old Japanese Lenovo ThinkPad E540 Laptop but did not try there because it's dead)*
+> - And many more that has yet to come.
 >
-> Bug reports and feedback welcome via GitHub Issues.
-> Full stable release planned for **v3.0**.
+> ### Bug reports and feedback will be welcomed via GitHub Issues or in this project.
+> ### Full official stable release planned for **v3.0**.
