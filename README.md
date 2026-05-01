@@ -113,7 +113,7 @@ Or this if returns reversed:
 Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.exe" -iconFile ".\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor — No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
 ```
 
-But there's already a `CLICK_TO_RECOMPILE.ps1` script!	
+But there's already a `CLICK_TO_RECOMPILE.ps1` script!  
 You just have to run it and enjoy than doing all that complicated steps!
 
 > The pre-built `.exe` works on any Windows 10/11 machine.  
