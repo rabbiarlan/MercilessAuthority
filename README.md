@@ -1,67 +1,77 @@
-# ⚡ MercilessAuthority 🔋 — Totalitarian Battery Monitor   
+# ⚡ MercilessAuthority ⚡ — Totalitarian Battery Monitor   
 ## *💚🔋✅ No mercy. No remorse. No dead batteries. 🚫🪫❌*   
 ### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor I've ever made for fun!*   
 #### *Only for Windows Laptops that has functioning batteries!*
 
-**“This is apparently a Super high-attention very aggressive strict focus mode notifier battery percentage-management alert system that actively interrupts and reinforces awareness of battery status to prevent missed low-power situations.  
-It does not support in any other operating systems or in any legacy operating systems”**
+**“This tool is apparently a Super high-attention very aggressive strict focus  
+mode notifier battery percentage-management alert system that's intentionally  
+very intrusive by design — actively interrupts and reinforces awareness of battery  
+status to prevent missed low-power situations. It does not support in any other  
+forms of operating systems or in any other forms of legacy operating systems.  
+Only in Windows 10 and in Windows 11. Use only if you understand its behavior.”**
 
-> Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭   
-> God first, before technology. — Matthew 6:33   
+> Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭  
+> God first, before technology. — Matthew 6:33  
 > From **v1.0** (basic popup MessageBox) to **v2.21** (fullscreen lockout with kernel32 P/Invoke) — built entirely from scratch.
-> ⚠️ This tool is intentionally very intrusive by design. Use only if you understand its behavior.
 
 ---
 
 # ⚠️READ THIS FIRST BEFORE USE AT YOUR OWN RISK —Why It Looks Like Malware‼️ *(But It Isn't)*
 
-This app blocks `Alt+Tab`, the `Win key`, `Ctrl+Esc`, and many others till it goes fullscreen unclosable once it activates.   
+This app blocks `Alt+Tab`, the `Win key`, `Ctrl+Esc`, and many others till it goes fullscreen unclosable once it activates.
+
 It forces you to click on the Red button that says: **“YES pwease, Master~!”** *(I'm sorry if you have to go through this bro...🙏)*
 
 **That's intentional. Making you suffer while manually maintaining your battery duration and health drastically.**
 
 ### Here's why:
 
-If your laptop **dies at approximately less than 10%** because of a tiny toast notification was easy to ignore, you will lose unsaved work and the effects are irreversible. MercilessAuthority fixes this issue and makes the alert **VERY IMPOSSIBLE to IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
-Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried `Ctrl+Alt+Del` after initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
+If your laptop **dies at approximately less than 10%** because of a tiny toast notification was easy to ignore, you will lose unsaved work and the effects are irreversible. MercilessAuthority fixes this issue and makes the alert **VERY VERY IMPOSSIBLE TO IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
+Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried `Ctrl+Alt+Del` after it initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
 
-The source code is fully publicly explicitly open. You can read every single line one by one line by line precisely carefully before running anything in some systems or in yours.
+The source code is *fully publicly explicitly open.* You can read every single line one by one line by line precisely carefully before running anything in some systems or in yours.
 
-**This is not malware.** It is a very aggressively opinionated battery management software that I have created just for fun.
+**This is not malware.**  
+It is a very aggressively opinionated battery management software that I have created just for fun.
 
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
-**“Totalitarian battery monitor inspired by North Korean Authoritarian Control.”**
+**“Totalitarian battery monitor inspired by The North Korean's Totalitarian Authoritarian Control.”**
 
 ---
 
-# 🛑 EMERGENCY EXIT / HOW TO STOP THIS
+# 🛑 EMERGENCY EXITS ON HOW TO STOP THIS
 
-If you ever get stuck or want to immediately stop MercilessAuthority:
+If you ever get stuck or want to immediately stop `MercilessAuthority.exe` as an emergency:
 
 ### Option 1 — Task Manager (Recommended, *if it works*)
 1. Press `Ctrl + Shift + Esc`
-2. Find **MercilessAuthority.exe**
-3. Click **End Task**
+2. Find **MERCILESS AUTHORITY** (or search `MercilessAuthority.exe`)
+3. Click **End Task** or Right-Click it and press **End the process**
 
 ### Option 2 — Secure Screen *(if it still works)*
 1. Press `Ctrl + Alt + Delete`
 2. Open **Task Manager**
-3. End the process
+3. Find **MERCILESS AUTHORITY** (or search `MercilessAuthority.exe`)
+4. Click **End Task** or Right-Click it and press **End the process**
 
 But me? This is the only thing that **works** when i tried both, which is:
 
 ### Option 3 — Force Shutdown (One Last Resort)
 Hold the **power button** until your laptop turns off.
 
-> ⚠️ This program is intentionally aggressive.
-> You are ALWAYS responsible for having a way to stop it.
+> **⚠️This program is intentionally aggressive.⚠️**  
+> You are ALWAYS responsible for having a way to stop it when this stuff happens...  
+> And if you wondering why other escape routes don't work? Your only choice is this:  
+> Click on the Red button that exactly says,  
+> **"YES pwease, Master~!"** and the fullscreen will disappear instantly.
 
-If you are not comfortable with fully strictly forced fullscreen behavior, **DO NOT RUN THIS PROGRAM AND TRY THE TEST COMMANDS INSTEAD.**
+If you are not comfortable with fully strictly forced fullscreen behavior...  
+**DO NOT RUN THIS PROGRAM AND TRY THE TEST COMMANDS BY SCROLLING BELOW TO SEE THEM INSTEAD.**
 
 ---
 
-## 🔋 What It Does
+## 🔋 So, What It Does and Do?
 
 Monitors your laptop battery every 5 seconds using Windows kernel32 `GetSystemPowerStatus()` — the same API your taskbar uses, zero WMI lag or inaccuracy.
 
@@ -75,7 +85,7 @@ Three alert modes:
 
 ---
 
-## 🛠️ Technical Architecture
+## 🛠️ Advanced Technical Architecture
 
 For the developers or some curious geeks like me who want to know what's actually happening under the hood:
 
@@ -88,6 +98,7 @@ For the developers or some curious geeks like me who want to know what's actuall
 - **TableLayoutPanel** — DPI-proof at 150% scaling on 1080p displays
 - **Wallpaper slice repaint** on all custom labels — no GDI ghost text artifacts
 - **Beep fires on `Add_Shown`** — exact millisecond the form becomes visible, zero audio gap
+- **And many more others** — that isn't included here!
 
 ---
 
@@ -102,21 +113,21 @@ For the developers or some curious geeks like me who want to know what's actuall
 | **Runtime** | None required — MercilessAuthority.exe is self-contained |
 | **PowerShell** | Only needed if recompiling from source (`PS 7.5.4+`) |
 | **Recompile tool** | Standard ps2exe v0.5.0.33 by MScholtes (`not ps2exe.core`) |
-| **Device** | A laptop with a battery (obviously💀🥀🥶🙏) or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
+| **Device** | A laptop with a battery (obviously💀🥀🥶🙏) Or if you're in a mobile phone running Windows *"dayumnn that's impressive!"* |
 
 > ### **Notes:**  
 > Windows Defender may flag this on first run due to keyboard hooks   
 > and force-shutdown behaviour. This is a very false positive. Source code is fully   
 > open for you to read — try reading `BatteryMercy.ps1` and `RECOMPILE_GUIDE.ps1`  
-> to verify exactly what runs.  
+> carefully to clarify and quadruple verify exactly what it runs.  
 > And if you have any kind of AV software, add this to exclusions to  
 > further prevent from not working properly. *(Or not if you don't want to)*
 
-To **recompile** from source only, download the given files and this:
+To **recompile** from source only, download the given files from this repository and this:
 - Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v0.5.0.33 by MScholtes](https://github.com/MScholtes/PS2EXE)
 
 Then open **Windows PowerShell 7.5.4+ as `Administrator`** and run this  
-**CRITICAL STEP** by typing `Set-Location "C:\path\to\Scripts"` first or else error.
+**CRITICAL STEP** by typing `Set-Location "C:\path\to\MercilessBattery"` first or else error.
 
 After that, copy this:
 ```powershell
@@ -151,7 +162,7 @@ You just have to run it and enjoy than doing all that complicated steps!
 ## 🚀 Installation and ✍️ How-To-Use it
 
 1. Download or clone this repository
-2. Place all files in the **same folder** *(e.g. `C:\Scripts\` or anywhere you want)*
+2. Place all files in the **same folder** *(e.g. `C:\MercilessBattery\` or anywhere you want)*
 3. Place `holycleanAPP.ico` in the same folder if it's not included.
 4. Right-click or Double-click `CLICK_TO_RECOMPILE.vbs` → Run — this compiles `MercilessAuthority.exe`
 5. Search up `Task Scheduler` in Startup Menu or in Search Bar in Taskbar
@@ -187,14 +198,14 @@ pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario h
 ```powershell
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
-You have to type `Set-Location "C:\path\to\Scripts"` first or else error.
+You have to type `Set-Location "C:\path\to\MercilessBattery"` first or else error.
 
 ---
 
 ## 📁 File Structure inside Scripts Folder
 
 ```
-MercilessAuthority\
+MercilessAuthority\             ← Could be any name you want, mine is Scripts
 │   *(These "Archive" and "Pictures of what it looks like" folders
 │     is very optional to keep. My set default location is C:\Scripts)
 ├── Archive\
@@ -211,7 +222,7 @@ MercilessAuthority\
 ├── CLICK_TO_RECOMPILE.vbs      ← Double-click to recompile
 ├── LaunchBattery.vbs           ← Launcher (use in Task Scheduler)
 ├── RECOMPILE_GUIDE.ps1         ← Detailed recompile instructions
-├── VisualFX-BestAppearance.ps1 ← Sets Windows visual FX on startup (this is optional)
+├── VisualFX-BestAppearance.ps1 ← Sets Windows visual FX on startup (this is very optional)
 ├── LICENSE                     ← MIT License
 ├── MercilessAuthority.exe      ← Compiled executable (pre-built)
 ├── holycleanAPP.ico            ← App icon (must be in same folder)
@@ -301,7 +312,7 @@ and creative vision is all made by Rabbi S. Arlan.
 >
 > **Known Limitations(Beware):**
 > - UI scaling not yet optimized for 4K (200%+ DPI) displays.  
-> - Slideshow wallpaper feature requires a OneDrive Desktop folder to exist.  
+> - Full Slideshow wallpaper feature requires a OneDrive Desktop folder to exist.  
 > - *(My apologies but try check inside the codes to fully fix the paths)*  
 > - Not tested on Windows 10 & ARM64 or non-standard display configurations.  
 > - *(I have a 13 year old Japanese Lenovo ThinkPad E540 Laptop but did not try there because it's dead)*  
