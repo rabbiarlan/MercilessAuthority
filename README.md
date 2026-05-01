@@ -345,7 +345,7 @@ and creative vision is all made by Rabbi S. Arlan.
 > - *(I have a 13 year old Japanese Lenovo ThinkPad E540 Laptop but did not try there because it's dead)*  
 > - And many more that has yet to come.
 >
-> If you have any suggestions like a settings button in the top right corner when the battery event happened, you can change the critical level 35% to 20% and optimal level 85% to 80% in sliders, then ask me and i'll most certainly add it!
+> If you have any suggestions like a settings button in the top right corner when the battery event happened, you can change the critical level 35% to 20% and optimal level 85% to 80% in sliders and have the ability to customize the title, message and the button, then ask me and i'll most certainly add it!
 >
 > ### Full Official Very Stable Release Planned for **v3.0** in the upcoming future.
 > ### Bug reports and feedbacks will be welcomed via GitHub Issues or in this project.
