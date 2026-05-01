@@ -9,6 +9,7 @@ It does not support in any other operating systems or in any legacy operating sy
 > Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭   
 > God first, before technology. — Matthew 6:33   
 > From **v1.0** (basic popup MessageBox) to **v2.21** (fullscreen lockout with kernel32 P/Invoke) — built entirely from scratch.
+> ⚠️ This tool is intentionally very intrusive by design. Use only if you understand its behavior.
 
 ---
 
@@ -31,6 +32,32 @@ The source code is fully publicly explicitly open. You can read every single lin
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
 **“Totalitarian battery monitor inspired by North Korean Authoritarian Control.”**
+
+---
+
+# 🛑 EMERGENCY EXIT / HOW TO STOP THIS
+
+If you ever get stuck or want to immediately stop MercilessAuthority:
+
+### Option 1 — Task Manager (Recommended, *if it works*)
+1. Press `Ctrl + Shift + Esc`
+2. Find **MercilessAuthority.exe**
+3. Click **End Task**
+
+### Option 2 — Secure Screen *(if it still works)*
+1. Press `Ctrl + Alt + Delete`
+2. Open **Task Manager**
+3. End the process
+
+But me? This is the only thing that **works** when i tried both, which is:
+
+### Option 3 — Force Shutdown (One Last Resort)
+Hold the **power button** until your laptop turns off.
+
+> ⚠️ This program is intentionally aggressive.
+> You are ALWAYS responsible for having a way to stop it.
+
+If you are not comfortable with fully strictly forced fullscreen behavior, **DO NOT RUN THIS PROGRAM AND TRY THE TEST COMMANDS INSTEAD.**
 
 ---
 
