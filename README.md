@@ -26,7 +26,7 @@ It forces you to click on the Red button that says: **“YES pwease, Master~!”
 
 ### Here's why:
 
-If your laptop **dies at approximately less than 10%** because of a tiny toast notification was easy to ignore, you will lose unsaved work and the effects are irreversible. MercilessAuthority fixes this issue and makes the alert **VERY VERY IMPOSSIBLE TO IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
+If your laptop **dies at approximately less than 10%** because of that single literal tiny toast notification was very easy to ignore, you will lose most certainly almost have unsaved work and the effects are prone to be irreversible. MercilessAuthority App fixes this issue and makes the alert **VERY VERY IMPOSSIBLE TO IGNORE** with also a mode to a literal **60 second countdown** if you try to deplete your battery to **ZERO** — you must literally acknowledge it like acknowledging God before you can continue!   
 Task Manager always remains accessible as an emergency escape. *(If that's possible for you, but from my experience, i tried `Ctrl+Alt+Del` after it initiated, welp it didn't work, then this keyboard shortcut is also included in the blocked lists too)*
 
 The source code is *fully publicly explicitly open.* You can read every single line one by one line by line precisely carefully before running anything in some systems or in yours.
@@ -37,37 +37,6 @@ It is a very aggressively opinionated battery management software that I have cr
 So expect getting this reaction from yourself: *“Why is this app literally controlling my system like this?”* — You probably.
 
 **“Totalitarian battery monitor inspired by The North Korean's Totalitarian Authoritarian Control.”**
-
----
-
-# 🛑 EMERGENCY EXITS ON HOW TO STOP THIS
-
-If you ever get stuck or want to immediately stop `MercilessAuthority.exe` as an emergency:
-
-### Option 1 — Task Manager (Recommended, *if it works*)
-1. Press `Ctrl + Shift + Esc`
-2. Find **MERCILESS AUTHORITY** (or search `MercilessAuthority.exe`)
-3. Click **End Task** or Right-Click it and press **End the process**
-
-### Option 2 — Secure Screen *(if it still works)*
-1. Press `Ctrl + Alt + Delete`
-2. Open **Task Manager**
-3. Find **MERCILESS AUTHORITY** (or search `MercilessAuthority.exe`)
-4. Click **End Task** or Right-Click it and press **End the process**
-
-But me? This is the only thing that **works** when i tried both, which is:
-
-### Option 3 — Force Shutdown (One Last Resort)
-Hold the **power button** until your laptop turns off.
-
-> **⚠️This program is intentionally aggressive.⚠️**  
-> You are ALWAYS responsible for having a way to stop it when this stuff happens...  
-> And if you wondering why other escape routes don't work? Your only choice is this:  
-> Click on the Red button that exactly says,  
-> **"YES pwease, Master~!"** and the fullscreen will disappear instantly.
-
-If you are not comfortable with fully strictly forced fullscreen behavior...  
-**DO NOT RUN THIS PROGRAM AND TRY THE TEST COMMANDS BY SCROLLING BELOW TO SEE THEM INSTEAD.**
 
 ---
 
@@ -121,33 +90,34 @@ For the developers or some curious geeks like me who want to know what's actuall
 > open for you to read — try reading `BatteryMercy.ps1` and `RECOMPILE_GUIDE.ps1`  
 > carefully to clarify and quadruple verify exactly what it runs.  
 > And if you have any kind of AV software, add this to exclusions to  
-> further prevent from not working properly. *(Or not if you don't want to)*
+> further prevent from not working properly. *(Or not if you don't want to)*  
+> 👉 And also no silent background persistence — all behavior is user-visible at runtime.
 
 To **recompile** from source only, download the given files from this repository and this:
 - Standard PS2EXE (`not PS2EXE.Core`) — [ps2exe v0.5.0.33 by MScholtes](https://github.com/MScholtes/PS2EXE)
 
 Then open **Windows PowerShell 7.5.4+ as `Administrator`** and run this  
-**CRITICAL STEP** by typing `Set-Location "C:\path\to\MercilessBattery"` first or else error.
+**CRITICAL STEP** by typing `Set-Location "C:\path\to\MercilessBattery"` first in order to work or else error.
 
 After that, copy this:
-```powershell
-  Invoke-ps2exe `
-    -inputFile   ".\BatteryMercy.ps1" `
-    -outputFile  ".\MercilessAuthority.exe" `
-    -iconFile    ".\holycleanAPP.ico" `
-    -title       "MERCILESS AUTHORITY" `
-    -description "Totalitarian Battery Monitor — No Mercy, No Remorse" `
-    -product     "BatteryMercy System" `
-    -company     "Rabbi S. Arlan" `
-    -copyright   "2026 Rabbi S. Arlan. All rights reserved." `
-    -version     "2.21.0.0" `
-    -noConsole `
-    -noOutput `
-    -noError
+```pwsh
+Invoke-ps2exe `
+-inputFile   ".\BatteryMercy.ps1" `
+-outputFile  ".\MercilessAuthority.exe" `
+-iconFile    ".\holycleanAPP.ico" `
+-title       "MERCILESS AUTHORITY" `
+-description "Totalitarian Battery Monitor — No Mercy, No Remorse" `
+-product     "BatteryMercy System" `
+-company     "Rabbi S. Arlan" `
+-copyright   "2026 Rabbi S. Arlan. All rights reserved." `
+-version     "2.21.0.0" `
+-noConsole `
+-noOutput `
+-noError
 ```
 
 Or this if returns reversed:
-```powershell
+```pwsh
 Invoke-ps2exe -inputFile ".\BatteryMercy.ps1" -outputFile ".\MercilessAuthority.exe" -iconFile ".\holycleanAPP.ico" -title "MERCILESS AUTHORITY" -description "Totalitarian Battery Monitor — No Mercy, No Remorse" -product "BatteryMercy System" -company "Rabbi S. Arlan" -copyright "2026 Rabbi S. Arlan. All rights reserved." -version "2.21.0.0" -noConsole -noOutput -noError
 ```
 
@@ -159,9 +129,34 @@ You just have to run it and enjoy than doing all that complicated steps!
 
 ---
 
+## 🛑️ BEFORE YOU RUN THIS — ✋️ READ THIS EXPECTATION CLEARLY
+
+### This program WILL:
+- Take over your entire screen during important battery events when you reach
+  > ≤35%,unplugged, per-% drop  
+  > ≥85%, plugged in, per-% rise reaching critical levels  
+  > Below 10%
+- Block normal navigation shortcuts temporarily
+- Force you to acknowledge every single warnings manually
+- Interrupt what you're doing if battery becomes severely critical
+- And force you to click on the Red button that exactly says **"YES pwease, Master~!"**
+
+This program will NOT:
+- Harm your saved files or delete data
+- Install itself into system folders silently
+- Run in background without visible UI
+- Collect or send any user personal data
+- Do anything worrying or concerning.
+
+👉 If you are expecting a *very normal battery indicator app* — **this is NOT it or NOT for YOU.**  
+👉 If you are okay with **Super Aggressive Interruptive Totalitarian-Based design**  
+then proceed to the next section on how to install and how to use it.
+
+---
+
 ## 🚀 Installation and ✍️ How-To-Use it
 
-1. Download or clone this repository
+1. Download or clone this entire repository
 2. Place all files in the **same folder** *(e.g. `C:\MercilessBattery\` or anywhere you want)*
 3. Place `holycleanAPP.ico` in the same folder if it's not included.
 4. Right-click or Double-click `CLICK_TO_RECOMPILE.vbs` → Run — this compiles `MercilessAuthority.exe`
@@ -179,35 +174,67 @@ Or just double-click `LaunchBattery.vbs` to run it manually right now.
 
 ---
 
-## 🧪 Safe Test Runs
+## 🚪️🏃️ EMERGENCY EXITS ON HOW TO STOP THIS
 
-Don't want the force-shutdown behaviour while testing? Run `BatteryMercy_TestRun.ps1` instead. It fires the popups with real battery data but **never calls `Stop-Computer`**. Safe to run any time.
+If you ever get stuck or want to immediately stop `MercilessAuthority.exe` as an emergency:
 
-```powershell
+### Option 1 — Task Manager (Recommended, *if it works*)
+1. Press `Ctrl + Shift + Esc`
+2. Find **MERCILESS AUTHORITY** (or search `MercilessAuthority.exe`)
+3. Click **End Task** or Right-Click it and press **End the process**
+
+### Option 2 — Secure Screen *(if it still works)*
+1. Press `Ctrl + Alt + Delete`
+2. Open **Task Manager**
+3. Find **MERCILESS AUTHORITY** (or search `MercilessAuthority.exe`)
+4. Click **End Task** or Right-Click it and press **End the process**
+
+But me? This is the only thing that **works** when i tried both, which is:
+
+### Option 3 — Force Shutdown (One Last Resort)
+Hold the **power button** until your laptop turns off.
+
+> **⚠️This program is intentionally aggressive.⚠️**  
+> You are ALWAYS responsible for having a way to stop it when this stuff happens...  
+> And if you wondering why other escape routes don't work? Your only choice is this:  
+> Click on the Red button that exactly says,  
+> **"YES pwease, Master~!"** and the fullscreen will disappear instantly.
+
+If you are not comfortable with fully strictly forced fullscreen behavior...  
+**DO NOT RUN THIS PROGRAM AND TRY THE TEST COMMANDS BY MOVING TO THE NEXT SECTION BELOW INSTEAD.**
+
+---
+
+## 🧪 Safe Test Runs 💚️
+
+Don't want the force-shutdown behaviour while testing? Run `BatteryMercy_TestRun.ps1` instead.  
+It fires the popups with real battery data but **never calls `Stop-Computer`**.  
+Safe to run any time.
+
+```pwsh
 pwsh -ExecutionPolicy Bypass -File BatteryMercy_TestRun.ps1
 ```
 
-Or these other optional harmless test run commands to try it out right now:
-
-```powershell
+Or these other optional harmless test run commands to try it out right now!
+```pwsh
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario low
 ```
-```powershell
+```pwsh
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario high
 ```
-```powershell
+```pwsh
 pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 ```
-You have to type `Set-Location "C:\path\to\MercilessBattery"` first or else error.
+You have to type `Set-Location "C:\path\to\MercilessBattery"` first in order to work or else error.
 
 ---
 
 ## 📁 File Structure inside Scripts Folder
 
 ```
-MercilessAuthority\             ← Could be any name you want, mine is Scripts
-│   *(These "Archive" and "Pictures of what it looks like" folders
-│     is very optional to keep. My set default location is C:\Scripts)
+MercilessAuthority\             ← Could be any name you want, mine is called "Scripts"
+│        *(These "Archive" and "Pictures of what it looks like" folders
+│          is very optional to keep. My set default location is "C:\Scripts")
 ├── Archive\
 │   ├──MercyPopup_v3.11_RETIRED.ps1
 │   └──Recompile.ps1
@@ -278,7 +305,7 @@ THE SOFTWARE.
 
 ---
 
-## 👮 Other Infos
+## 👮 Other Infos 🚦️
 
 > **DO NOT USE THIS AS A HILARIOUS PRANK OR IN OTHER  
 > FORMS OF OTHER FUNNY SITUATIONS PLEASE!!! 😭️🙏️☠️🥀️**   
@@ -286,7 +313,7 @@ THE SOFTWARE.
 > BEEN GRANTED A GIVEN PERMISSION WITH ABILITY TO USE IT.   
 > I DO NOT HAVE ANY FORMS OF RESPONSIBILITY FOR ANY  
 > IRREVERSIBLE DAMAGES CAUSED FURTHER FROM THIS PROGRAM  
-> BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO, SO BECAUSE  
+> BY PEOPLE WITH SUSPICIOUS INTENTIONS TO DO SO, BECAUSE  
 > THIS APPLICATION TOOL IS AN EDUCATIONAL SYSTEM AUTOMATION  
 > PURPOSES PROJECT TO PUSH THE LIMITS OF DRASTICALLY ENHACING  
 > BATTERY LONGEVITY, HEALTH LEVELS AND DURATION AT ALL COSTS.  
@@ -303,7 +330,7 @@ and creative vision is all made by Rabbi S. Arlan.
 
 ---
 
-## 🚧 Beta Status
+## 🚧 Beta Status 🔂️
 
 > ### **This single-person project is currently in public beta (v2.21).**
 > Core features are fully functional and stable on the developer's hardware.  
@@ -312,11 +339,13 @@ and creative vision is all made by Rabbi S. Arlan.
 >
 > **Known Limitations(Beware):**
 > - UI scaling not yet optimized for 4K (200%+ DPI) displays.  
-> - Full Slideshow wallpaper feature requires a OneDrive Desktop folder to exist.  
+> - Full Background or Slideshow Wallpaper Features requires a OneDrive Desktop folder to exist.  
 > - *(My apologies but try check inside the codes to fully fix the paths)*  
 > - Not tested on Windows 10 & ARM64 or non-standard display configurations.  
 > - *(I have a 13 year old Japanese Lenovo ThinkPad E540 Laptop but did not try there because it's dead)*  
 > - And many more that has yet to come.
+>
+> If you have any suggestions like a settings button in the top right corner when the battery event happened, you can change the critical level 35% to 20% and optimal level 85% to 80% in sliders, then ask me and i'll most certainly add it!
 >
 > ### Full Official Very Stable Release Planned for **v3.0** in the upcoming future.
 > ### Bug reports and feedbacks will be welcomed via GitHub Issues or in this project.
