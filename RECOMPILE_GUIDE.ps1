@@ -27,6 +27,8 @@
 #   Double-click CLICK_TO_RECOMPILE.vbs → animated window does everything.
 #
 # TESTRUN COMMANDS (add -ExecutionPolicy Bypass — required for unsigned .ps1):
+# BUT RUN THIS FIRST: Set-Location "C:\path\to\MercilessAuthority"
+#
 #   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario low
 #   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario high
 #   pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
