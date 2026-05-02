@@ -2,20 +2,19 @@
 # ═══════════════════════════════════════════════════════════════════
 # Author  : Rabbi S. Arlan
 # Machine : HP ProBook mt22 — Celeron 5205U, 8GB DDR4-2400 RAM, 128GB M.2 SATA SSD
-# OS      : Windows 11 25H2 Pro 26200.8246 (dual-booted with Linux Mint XFCE 22.3 Zena)
+# OS      : Windows 11 25H2 Pro 26200.8328 (dual-booted with Linux Mint XFCE 22.3 Zena)
 # ═══════════════════════════════════════════════════════════════════
 # Full-screen animated recompile sequence. Copies BootSplash structure exactly.
 # Real ps2exe compile runs in background Runspace. Step label + bar update live.
 # Fades in → runs steps → shows result → click anywhere or 5s auto-close → fades out.
 # Version 1.0 March 19, 2026 - Windowed (broken, replaced)
 # Version 2.0 March 19, 2026 - Rebuilt fullscreen using BootSplash structure. Real compile. Live steps.
-# Version 2.1 March 19, 2026 - Free trial expired at Claude AI Sonnet 4.6 Extended..
-#                              Now tried Windsurf which is a completely legitimate copy of VSCode Studio
-#                              promising better AI... (i fraking hope so..)
+# Version 2.1 March 19, 2026 - Now tried Windsurf which is a completely legitimate copy of VSCode Studio
+#                              promising better AI... (i hope so lol..)
 #                              And now blud's frustated and stressed as i gave him scenarios like defeating cancer
 #                              or rejecting the cute loli anime catgirl demon succubus' sex offer
-#                              while literally fraking fixing everything that the terminal spew out errors
-#                              This is what it legitimately actually said: "I'm tired of this shi lmao"
+#                              while literally fixing everything that the terminal spew out errors
+#                              This is what it legitimately actually said: "I'm tired of this shi lmao"(why did the autocomplete said that)
 # Version 2.2 March 20, 2026 - Windsurf introduced duplicate Add-Type for RcState inside worker @'...'@
 #                              causing "type already exists" conflict. Runspace shares same AppDomain
 #                              as main session so outer RcState is already visible to worker.
