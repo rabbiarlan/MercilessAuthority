@@ -2,7 +2,7 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # Author  : Rabbi S. Arlan
 # Machine : HP ProBook mt22 — Celeron 5205U, 8GB DDR4-2400 RAM, 128GB M.2 SATA SSD
-# OS      : Windows 11 25H2 Pro 26200.8246 (dual-booted with Linux Mint XFCE 22.3 Zena)
+# OS      : Windows 11 25H2 Pro 26200.8328 (dual-booted with Linux Mint XFCE 22.3 Zena)
 # ─────────────────────────────────────────────────────────────────────────────
 # MERCILESSLY FORCES ALL Windows Visual Effects = Best Appearance
 # No survivors. No OFF. Everything beautiful. Always.
@@ -57,11 +57,12 @@
 # Wait for Explorer to fully load before forcing settings
 #
 # Remove the startup entry later: Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "VisualFX-BestAppearance" -ErrorAction SilentlyContinue
-# Apply now (default aggressive mask): powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\VisualFX-BestAppearance.ps1" -Mode apply
-# Use the milder (balanced) mask to reduce redraw/focus conflicts: powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\VisualFX-BestAppearance.ps1" -Mode apply -Balanced
-# Apply now and make it re-run at every logon (adds HKCU Run entry): powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\VisualFX-BestAppearance.ps1" -Mode apply -EnsureStartup
+# Run this first: Set-Location "C:\path\to\MercilessAuthority" or else error
+# Apply now (default aggressive mask): powershell -NoProfile -ExecutionPolicy Bypass -File ".\VisualFX-BestAppearance.ps1" -Mode apply
+# Use the milder (balanced) mask to reduce redraw/focus conflicts: powershell -NoProfile -ExecutionPolicy Bypass -File ".\VisualFX-BestAppearance.ps1" -Mode apply -Balanced
+# Apply now and make it re-run at every logon (adds HKCU Run entry): powershell -NoProfile -ExecutionPolicy Bypass -File ".\VisualFX-BestAppearance.ps1" -Mode apply -EnsureStartup
 #
-# Script mode: apply (default), backup, status
+# Script mode: apply (default), backup, status, ignore useless stuff above
 
 
 param(
