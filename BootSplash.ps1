@@ -2,7 +2,7 @@
 # ─────────────────────────────────────────────────────────────────────
 # Author  : Rabbi S. Arlan
 # Machine : HP ProBook mt22 — Celeron 5205U, 8GB DDR4-2400 RAM, 128GB M.2 SATA SSD
-# OS      : Windows 11 25H2 Pro 26200.8246 (dual-booted with Linux Mint XFCE 22.3 Zena)
+# OS      : Windows 11 25H2 Pro 26200.8328 (dual-booted with Linux Mint XFCE 22.3 Zena)
 # ─────────────────────────────────────────────────────────────────────
 # Displays a dramatic fullscreen boot animation while MercilessAuthority.exe initializes.
 # Launched silently by LaunchBattery.vbs on every logon. Auto-closes after sequence completes.
