@@ -2,14 +2,17 @@
 # ─────────────────────────────────────────────────────────────────────
 # Author  : Rabbi S. Arlan
 # Machine : HP ProBook mt22 — Celeron 5205U, 8GB DDR4-2400 RAM, 128GB M.2 SATA SSD
-# OS      : Windows 11 25H2 Pro 26200.8246 (dual-booted with Linux Mint XFCE 22.3 Zena)
+# OS      : Windows 11 25H2 Pro 26200.8328 (dual-booted with Linux Mint XFCE 22.3 Zena)
 # ─────────────────────────────────────────────────────────────────────
 # STANDALONE TEST v2.21 — simulates ALL three alert scenarios WITHOUT needing real battery %
 # Run this AFTER killing MercilessAuthority.exe to test popup + beep directly
 # Usage (run in PowerShell 7 as Admin, NOT inside VSCode terminal):
-#   Test LOW    popup: pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario low
-#   Test HIGH   popup: pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario high
-#   Test DEAD   popup: pwsh -ExecutionPolicy Bypass -STA -File "$PSScriptRoot\BatteryMercy_TestRun.ps1" -Scenario dead
+#   First you must run this command first: Set-Location "C:\path\to\MercilessAuthority" or else error
+#   Then you may pick one of these selections of test run commands:
+#
+#   Test LOW    popup: pwsh -ExecutionPolicy Bypass -STA -File "$.\BatteryMercy_TestRun.ps1" -Scenario low
+#   Test HIGH   popup: pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario high
+#   Test DEAD   popup: pwsh -ExecutionPolicy Bypass -STA -File ".\BatteryMercy_TestRun.ps1" -Scenario dead
 #
 # NOTE: DEAD scenario will NOT call Stop-Computer in TestRun — safe to test.
 # The countdown will reach zero and the form just closes. No shutdown happens.
