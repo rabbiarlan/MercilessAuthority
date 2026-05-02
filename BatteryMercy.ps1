@@ -3,7 +3,7 @@
 # ───────────────────────────────────────────────────────────────────
 # Author  : Rabbi S. Arlan
 # Machine : HP ProBook mt22 — Celeron 5205U, 8GB DDR4-2400 RAM, 128GB M.2 SATA SSD
-# OS      : Windows 11 25H2 Pro 26200.8246 (dual-booted with Linux Mint XFCE 22.3 Zena)
+# OS      : Windows 11 25H2 Pro 26200.8328 (dual-booted with Linux Mint XFCE 22.3 Zena)
 # ═══════════════════════════════════════════════════════════════════
 # WHAT IT DOES:
 #   Monitors laptop battery % every 5 seconds via kernel32 GetSystemPowerStatus()
@@ -30,7 +30,7 @@
 #     • DEAD countdown: double-buffered Panel via SetStyle reflection —
 #       WM_ERASEBKGND suppressed, zero flicker, cached bg bitmap, 1s ticks
 #
-# COMPILED OUTPUT : $PSScriptRoot\MercilessAuthority.exe (ps2exe v0.5.0.33)
+# COMPILED OUTPUT : .\MercilessAuthority.exe (ps2exe v0.5.0.33)
 # TASK SCHEDULER  : MercilessBatteryMonitor → runs LaunchBattery.vbs at logon
 # TESTRUN         : BatteryMercy_TestRun.ps1 (safe — no Stop-Computer)
 # ═══════════════════════════════════════════════════════════════════
@@ -203,7 +203,7 @@
 #                                 release feels fluid. Previously both directions used 0.3.
 # Version 2.21 April 27, 2026   - Finally released to GitHub repo and fixed every single file
 #                                 path directories for other laptops too instead of mine!
-# Version 2.22 April idk, 2026  - Animation button when on hover or on click will be fixed soon
+# Version 2.22 May idk, 2026  - Animation button when on hover or on click will be fixed soon
 #                                 maybe i guess since i find it kinda blocky, blurry or strange i guess.
 #                                 It'll be soon.
 # Version 3.0 Unknown date 2026 - Final tweaks. Code cleanup. Comment polish. Version bump to 3.0.
