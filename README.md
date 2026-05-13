@@ -10,7 +10,7 @@ status to prevent missed low-power situations. It does not support in any other
 forms of operating systems or in any other forms of legacy operating systems.  
 Only in Windows 10 and in Windows 11. Use only if you understand its behavior.”**
 
-> Built by the Author: **Rabbi S. Arlan**; a 16 years old Computer Science & Engineering enthusiast from the Philippines 🇵🇭  
+> Built by the Author: **Bakokong Henkoloy**; a Computer Science & Engineering enthusiast from the Philippines 🇵🇭  
 > God first, before technology. — Matthew 6:33  
 > From **v1.0** (basic popup MessageBox) to **v2.21** (fullscreen lockout with kernel32 P/Invoke) — built entirely from scratch.
 
