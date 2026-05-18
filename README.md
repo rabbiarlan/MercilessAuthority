@@ -1,6 +1,6 @@
 # ⚡ MercilessAuthority ⚡ — Totalitarian Battery Monitor   
 ## *💚🔋✅ No mercy. No remorse. No dead batteries. 🚫🪫❌*   
-### *The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor I've ever made for fun!*   
+### *"The Most Merciless Totalitarian Authoritarian Fullscreen Battery Monitor I've ever made for fun!"*   
 #### *Only for Windows Laptops that has functioning batteries!*
 
 **“This tool is apparently a Super high-attention very aggressive strict focus  
